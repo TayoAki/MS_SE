@@ -1,0 +1,19 @@
+{
+  "name": "rc1-fabric-apps",
+  "label": "EXAMPLE · SILHOUETTE = YOU",
+  "_sources": "Fabric Apps overview (ms.date 2026-09-15), Pricing (2026-09-15), Create a Fabric app with Claude Code — shot with shoot-page-9x16.py on 2026-10-21",
+  "lines": [
+    {"say": "Can Fabric Apps replace Power BI? Short answer: no. Here's why.", "kind": "face", "hook": ["POWER BI", "DONE?"]},
+    {"say": "Fabric Apps lets developers build full apps on Fabric. You write the data model in TypeScript.", "kind": "page", "src": "assets/pages/intro.png", "hl": true},
+    {"say": "It generates the APIs, handles sign-in, and hosts the app for you.", "kind": "page", "src": "assets/pages/features.png", "hl": true},
+    {"say": "And it reads a lakehouse, a warehouse, a SQL database or a semantic model.", "kind": "page", "src": "assets/pages/connectors.png", "hl": true},
+    {"say": "So it's built for people entering and changing data, not just looking at it.", "kind": "page", "src": "assets/pages/mutations.png", "hl": true, "annot": "READ + WRITE"},
+    {"say": "But replace Power BI? Three reasons it won't.", "kind": "face", "payoff": "won't"},
+    {"say": "One: it's code. It's built for TypeScript developers, not report builders.", "kind": "page", "src": "assets/pages/claude-code.png", "hl": true, "annot": "CODE FIRST"},
+    {"say": "Two: it's in preview, and a tenant admin has to switch it on.", "kind": "page", "src": "assets/pages/tenant.png", "hl": true, "annot": "PREVIEW"},
+    {"say": "Three: every read and every write bills your Fabric capacity, and it isn't in every region yet.", "kind": "page", "src": "assets/pages/pricing.png", "hl": true, "annot": "EVERY QUERY\nUSES CUs"},
+    {"say": "Reports are for reading the numbers. Apps are for changing them.", "kind": "face", "payoff": "changing"},
+    {"say": "In a hospital, that's the Excel tracker your unit emails around. Not the dashboard.", "kind": "face", "emph": ["tracker", "a"]},
+    {"say": "Comment APPS and I'll send you the one-page comparison.", "kind": "cta", "keyword": "APPS"}
+  ]
+}

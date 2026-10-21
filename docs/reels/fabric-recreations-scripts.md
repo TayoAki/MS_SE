@@ -26,6 +26,9 @@ Recreates: [Guy in a Cube, "Can Fabric Apps REPLACE Power BI?"](https://www.yout
 
 **Hook (caption + post title):** Can Fabric Apps replace Power BI?
 
+Built as an example cut (real Microsoft Learn page shots, silhouette for the creator): `docs/reels/demo/rc1.json` →
+`build_short.py`. Script folder: `content-machine/scripts/2026-10-26-01-fabric-apps-vs-power-bi/`.
+
 | # | Say | Picture | Source |
 |---|---|---|---|
 | 1 | "Can Fabric Apps replace Power BI? Short answer: no. Here's why." | face; first frame FABRIC APPS vs POWER BI | — |
@@ -36,7 +39,7 @@ Recreates: [Guy in a Cube, "Can Fabric Apps REPLACE Power BI?"](https://www.yout
 | 6 | "But replace Power BI? Three reasons it won't." | display 3 REASONS | — |
 | 7 | "One: it's code. It's built for TypeScript developers, not report builders." | the TypeScript line on the page | same |
 | 8 | "Two: it's in preview, and a tenant admin has to switch it on." | the preview note + the tenant-settings step | same |
-| 9 | "Three: it runs on your Fabric capacity, and it isn't in every region yet." | the prerequisites section | same |
+| 9 | "Three: every read and every write bills your Fabric capacity, and it isn't in every region yet." | the Pricing page, "How billing works" | [Pricing and capacity usage](https://learn.microsoft.com/en-us/fabric/apps/pricing) |
 | 10 | "Reports are for reading the numbers. Apps are for changing them." | face; display word CHANGING | — |
 | 11 | "In a hospital, that's the Excel tracker your unit emails around. Not the dashboard." | face; hollow word TRACKER | — |
 | 12 | "Comment APPS and I'll send you the one-page comparison." | COMMENT APPS + arrow | — |
@@ -44,6 +47,7 @@ Recreates: [Guy in a Cube, "Can Fabric Apps REPLACE Power BI?"](https://www.yout
 **Keep exact:**
 - "Fabric Apps (preview) is built on the Rayfin SDK… Developers define data models in TypeScript, and Fabric Apps automatically generates APIs, handles authentication, provides hosting, and integrates with Fabric services." (ms.date 2026-09-15)
 - "Fabric data connectors – Add typed access to a lakehouse, warehouse, SQL database in Fabric, or semantic model." · "A Fabric tenant administrator must enable the Fabric Apps workload" · "Fabric Apps services consume capacity units" · "Fabric Apps are not avaiable in all regions yet." (same page)
+- "Fabric apps run on Fabric capacity. Every operation that a Fabric app child service performs consumes CUs" · "Every GraphQL query (read) and mutation (write)… consumes CUs." (Pricing, ms.date 2026-09-15)
 - Line 5 rests on "The client SDK validates queries and mutations" → fallback: "So apps can write data back, not just show it."
 - Don't say reports can't write data: Power BI has write-back through translytical task flows with a SQL database in Fabric (`content-machine/fabric-field-guide.md`, use-case table).
 - If Fabric Apps is GA by filming day, rewrite line 8.
