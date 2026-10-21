@@ -10,7 +10,8 @@ optional film grade and sound effects — and every note you give it is saved so
 1. The recording: `~/content-machine/recordings/<file>` (one take per script; it's fine to repeat lines — the editor
    keeps the last clean take).
 2. Hand it the script from system 2 (`scripts/<…>/SCRIPT.md`: the spoken text, the facts table with links, and the
-   "On screen" list of real pages to capture) so it knows the intended words and what to show.
+   "On screen" list of real pages to capture) so it knows the intended words and what to show. Pictures for that list
+   come from `systems/3-editor/BROLL.md`: the allowed sources in order, the tools that find them, and the credits.
 3. Say: **"Edit ~/content-machine/recordings/<file> with nextphase-persa-shorts, script: <path to SCRIPT.md>"** — or let
    this skill call it the same way. Edit 2–3 recordings in parallel sessions if the computer can take it.
 4. The finished short goes to `~/content-machine/edits/<date>-<nn>-<slug>.mp4`; LOOK at its contact sheet before saying

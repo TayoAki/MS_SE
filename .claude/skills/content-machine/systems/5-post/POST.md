@@ -35,7 +35,7 @@ a scheduled post without asking. If a post fails, tell them; never retry silentl
 2. Upload each finished short (and its cover if the platform takes one) with `blotato_create_presigned_upload_url`, then
    PUT the file to the returned URL; keep the public media URL.
 3. Text: LinkedIn = the `## LinkedIn post` section of SCRIPT.md, as approved (hook in the first 2 lines, the same comment
-   keyword as the video, at most 3 hashtags). Other platforms: first line = the hook + the CTA, 2–4 short lines, 3–5
+   keyword as the video, at most 3 hashtags, then the picture credits it ends with). Other platforms: first line = the hook + the CTA, 2–4 short lines, 3–5
    hashtags. No emojis unless the user's own style uses them.
 4. Times: the next free slots from `profile.json → times` in their time zone, following `calendar/linkedin-video-plan.md`
    (A reach, B authority, C offer across the week), never two on the same account on the same day unless they ask.

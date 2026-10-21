@@ -23,3 +23,13 @@ recognisable people (the editor's BLACKLIST: no strangers, no stock people) and 
 |---|---|---|---|
 | waiting-room.jpg | Harrison Keely, "A waiting room at a medical healthcare clinic, doctor's office, hospital" | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:A_waiting_room_at_a_medical_healthcare_clinic,_doctor%27s_office,_hospital.jpg |
 | corridor.jpg (if fetched) | W.carter, "Corridor on the second level – NÄL hospital 3" | CC0 | https://commons.wikimedia.org/wiki/File:Corridor_on_the_second_level_-_N%C3%84L_hospital_3.jpg |
+
+## Real Fabric screenshots and diagrams (Microsoft Learn, CC BY 4.0)
+`learn_media.py` collects the screenshots and diagrams from the Fabric docs. You can give it a section (`fabric/iq`),
+a single page, or `"search:<words>"` (Fabric pages whose title has those words). It writes `media.json` with the
+credit and contact sheets to look at. SVG diagrams are rendered to PNG, and icons are dropped.
+```bash
+~/.cache/persa-shorts/py/bin/python -I docs/reels/demo/learn_media.py "search:direct lake" ~/persa-shorts/_broll-library/direct-lake
+```
+Credit in the post: "Screens: Microsoft Learn, CC BY 4.0 (cropped)". For which source to use for each kind of picture
+and the rules, see `.claude/skills/content-machine/systems/3-editor/BROLL.md`.

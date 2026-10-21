@@ -54,7 +54,8 @@ funnel: reach|authority|offer · pillar: P1–P5 · calendar: week <n> video A|B
 ## Script             (the full spoken text, exactly as they'll say it)
 ## Facts              | claim | value | source link |   ← every number/claim; anything unverified is cut or flagged ⚠
 ## Cover text         <2–4 words from the script> (system 4)
-## On screen          what to SHOW when they SAY… (real pages/apps to capture for system 3)
+## On screen          what to SHOW when they SAY… (real pages/apps to capture for system 3); sources, licences and
+                     credit lines from `systems/3-editor/BROLL.md`
 ## The free thing     what people get for commenting → write it as DELIVERABLE.md in the same folder
 ## LinkedIn post      the text that sits above the video (system 5 posts it as written):
                      lines 1–2 = the hook in words (all that shows before "…more"; it must work on its own) →

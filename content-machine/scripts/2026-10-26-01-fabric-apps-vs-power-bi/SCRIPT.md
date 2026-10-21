@@ -52,6 +52,9 @@ real 9:16 Microsoft Learn page shots, phrase highlighted on the word (already sh
 assets/pages/`): overview intro · key features · connectors · queries and mutations · Create a Fabric app with Claude Code ·
 tenant admin settings · pricing "How billing works". Best upgrade: 10–15 s of your own screen — the Fabric Apps item in
 your demo workspace, or an app you scaffolded — over lines 2–5. Built example: `docs/reels/demo/rc1.json`.
+Licences (`systems/3-editor/BROLL.md`): the Learn page shots are CC BY 4.0, credited in the post. Fabric Apps is in
+preview, so Microsoft's screenshot permission doesn't cover your own screen of it. Filming it relies on fair use: decide
+before you record.
 
 ## The free thing
 DELIVERABLE.md in this folder — Fabric Apps vs Power BI reports, one page.
@@ -72,3 +75,5 @@ Reports are for reading the numbers. Apps are for changing them.
 
 Comment APPS and I'll send you the one-page comparison.
 #MicrosoftFabric #PowerBI
+
+Screens: Microsoft Learn, CC BY 4.0 (cropped, highlighted)

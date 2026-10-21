@@ -24,7 +24,7 @@ Each system has its own guide in `systems/`; read the one you are running, every
 | 0 | The LinkedIn profile | "fix my profile", "rewrite my headline" | `systems/0-profile/PROFILE.md` |
 | 1 | The news / ideas | "scrape for me", "give me ideas", "plan this week" | `systems/1-news/NEWS.md` |
 | 2 | The script | "write the scripts", "script 3 and 5" | `systems/2-script/SCRIPT.md` |
-| 3 | The editor | "edit this" + a recording | `systems/3-editor/EDITOR.md` |
+| 3 | The editor | "edit this" + a recording | `systems/3-editor/EDITOR.md` (pictures: `BROLL.md`) |
 | 4 | The cover | "make the cover(s)" | `systems/4-cover/COVER.md` |
 | 5 | Posting | "post them", "schedule this week" | `systems/5-post/POST.md` |
 | 6 | Comments, DMs, signals | "help me comment", "draft my DMs", "find signals" | `systems/6-network/NETWORK.md` |
