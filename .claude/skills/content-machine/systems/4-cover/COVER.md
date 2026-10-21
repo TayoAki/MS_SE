@@ -1,5 +1,11 @@
 # System 4 — the cover (reel thumbnail)
 
+**On LinkedIn (the main platform):** a custom thumbnail is documented only for ads, so a normal video post shows its
+first frame. There the "cover" is the edit's opening frame: the hook words on screen at 0.0 s, in the brand's locked
+text style. Make a separate cover image only for platforms that take one (Instagram, TikTok, YouTube) or for a LinkedIn
+document/carousel post. Business audience: keep worlds plausible for health-system leaders (a hospital corridor of
+paper reports, a server room flooding with spreadsheets) — striking, never silly.
+
 On reels the cover is what people see on your profile, so it matters. Every cover is **3 things: one world, one scale
 trick, and the same text style, every single time.** The world changes every post (you next to a giant city, inside a
 museum, in a supermarket — everything around you going crazy: a crowd, a flood, people jumping) while YOU stay calm,

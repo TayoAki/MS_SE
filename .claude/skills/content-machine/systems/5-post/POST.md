@@ -16,6 +16,19 @@ a scheduled post without asking. If a post fails, tell them; never retry silentl
 - Blotato publishes and schedules on LinkedIn but does **not** handle LinkedIn comments, DMs or analytics — those are
   system 6, by hand. Blotato's API/MCP access is listed for paid plans, not the free trial.
 
+## LinkedIn video facts that shape the post (LinkedIn Help, checked 2026-10-21 — see `research/linkedin-video.md`)
+- 9:16 is supported (aspect ratios 1:2.4 to 2.4:1), 3 s to 15 min, MP4/MOV. Our 1080×1920 shorts fit.
+- Video can autoplay **without sound** → the burned-in captions carry it. If LinkedIn offers auto-captions on the post,
+  turn them off so there aren't two caption layers.
+- Videos **under 30 s loop automatically** — a short reach video ends straight back on its hook, so end on the CTA.
+- A custom thumbnail is documented only for ads, so on a normal post **the first frame is the cover**: the edit should
+  open on a strong frame (the hook words on screen at 0.0 s).
+- LinkedIn's own B2B advice is "about 1–2 minutes" and to grab attention "within the first few seconds"; nothing official
+  penalises shorter. Test 30–60 s against 60–90 s in the week-4/8/13 reviews.
+- The full-screen video feed picks videos "based on relevance and performance"; you can't post into it directly.
+- "Comment WORD and I'll send it": no official LinkedIn statement either way. Send each DM by hand, and also post the
+  freebie link in a comment under the video so nobody has to wait.
+
 ## Steps
 1. `blotato_list_accounts` → the connected accounts and what each platform needs. Match them to `profile.json →
    platforms` (LinkedIn first; ask once which account if there's a profile AND a page).

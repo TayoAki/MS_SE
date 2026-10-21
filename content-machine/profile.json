@@ -1,0 +1,37 @@
+{
+  "name": "",
+  "handles": { "linkedin": "" },
+  "niche": "Microsoft Fabric for US health systems: messy data into reliable reporting - faster loads, fewer manual fixes, one governed platform",
+  "audience": "Health-system analytics leaders (VP/Director of Enterprise Analytics or BI, CDAO, CIO) and the data/BI engineers who live with slow, untrusted, hand-fixed reports",
+  "goal": "",
+  "language": "",
+  "platforms": ["linkedin"],
+  "times": [],
+  "timezone": "",
+  "videos_per_week": 3,
+  "cta": "comment WORD and I'll send you the week's freebie",
+  "offer_cta": "",
+  "sources": {
+    "days": 7,
+    "reddit": {
+      "subs": ["MicrosoftFabric", "PowerBI", "healthIT"],
+      "search": ["Epic Clarity", "Microsoft Fabric healthcare"]
+    },
+    "hn": { "search": ["Microsoft Fabric", "OneLake", "Direct Lake"] },
+    "github": { "search": [] },
+    "feeds": [
+      "https://community.fabric.microsoft.com/t5/s/rss/board?board.id=fbc_fabricupdatesblogs",
+      "https://community.fabric.microsoft.com/t5/s/rss/board?board.id=fbc_pbiupdatesblog",
+      "https://www.microsoft.com/en-us/microsoft-cloud/blog/industry/healthcare/feed/",
+      "https://news.google.com/rss/search?q=site:healthcareitnews.com+when:7d&hl=en-US&gl=US&ceid=US:en",
+      "https://news.google.com/rss/search?q=site:beckershospitalreview.com+%22health+IT%22+when:7d&hl=en-US&gl=US&ceid=US:en",
+      "https://www.youtube.com/feeds/videos.xml?channel_id=UCH0gDiJ1RSn3kkxRQnQaH1w",
+      "https://www.youtube.com/feeds/videos.xml?channel_id=UCFp1vaKzpfvoGai0vE5VJ0w",
+      "https://www.youtube.com/feeds/videos.xml?channel_id=UCsOfIwAXj1fT6LDqEDEAb4g",
+      "https://www.youtube.com/feeds/videos.xml?channel_id=UCcc21gBGNJwZM_eDEByeN-Q",
+      "https://www.youtube.com/feeds/videos.xml?channel_id=UCrvoIYkzS-RvCEb0x7wfmwQ",
+      "https://www.youtube.com/feeds/videos.xml?channel_id=UCFHGcKtofw8IQZRVFpTBjEw",
+      "https://blog.crossjoin.co.uk/feed/"
+    ]
+  }
+}

@@ -10,6 +10,8 @@ powered by the LinkedIn strategy (pillars, funnel, story bank, swipe file). Syst
 | **B · Authority** | the people who found you start trusting you | "how I did it": the lab / test / teardown on synthetic data, or a story from `story-bank.md` | 40–60 s | comment the keyword, or a question that invites their version |
 | **C · Offer** | buyers see what working with you looks like | the problem → what you do about it → proof (a story or a lab result) → the next step | 30–45 s | the offer CTA from `profile.md` (e.g. "DM me AUDIT") — no freebie |
 
+- Lengths are a starting point: LinkedIn's own B2B advice is about 1–2 minutes, videos under 30 s loop, and the first
+  frame is the thumbnail on a normal post (`systems/5-post/POST.md`). Test shorter vs longer in the reviews.
 - Record all three in one sitting. Video A and B can come from the same anchor tutorial the calendar already plans.
 - **Offer pillar:** the week's pillar if it is P1–P4. In P5 and trend weeks the offer rotates P1 → P2 → P3 → P4, because
   your buyers are health-system reporting leaders, not research teams.
