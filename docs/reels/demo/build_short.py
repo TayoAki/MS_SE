@@ -9,15 +9,39 @@ The spec lists the script's spoken lines; each line is one beat:
   {"say": "...", "kind": "page", "src": "assets/pages/x.png", "hl": true, "annot": "TEXT"}
                                                          a real 9:16 page shot owns the frame (shoot-page-9x16.py);
                                                          hl draws the marker over the phrase rects in x.json
+  {"say": "...", "kind": "shot", "src": "assets/shots/x.png", "crop": [x, y, w, h], "box": [[x, y, w, h]], "annot": "TEXT"}
+                                                         a screenshot or diagram (learn_media.py) shown whole in a window
+                                                         over the ground; crop and box are in the image's own pixels;
+                                                         the credit line above it comes from "credit" or the spec's
+                                                         "shot_credit"
   {"say": "...", "kind": "cta", "keyword": "WORD"}       the call to action; captions drop
 optional on any line: "emph": ["WORD", "w"|"a"] (hollow, on the spoken word), "payoff": "WORD" (filled, on the word),
 "hook": ["LINE 1", "LINE 2"] (big first-frame words: the thumbnail on LinkedIn).
 Images are paths inside <out>. Brand tokens come from the nextphase-persa-shorts skill.
 """
-import argparse, html, json, os, pathlib, shutil, sys
+import argparse, html, json, os, pathlib, shutil, struct, sys
 
 SKILL = pathlib.Path(os.path.expanduser("~/.claude/skills/nextphase-persa-shorts"))
 PACE, GAP = 2.75, 0.25          # words per second, breath between lines
+SHOT_W, SHOT_H, SHOT_TOP = 1000, 880, 170   # the picture area above the camera card
+
+
+def img_size(path):
+    """(width, height) of a PNG or JPEG, from its header (no Pillow needed)."""
+    b = pathlib.Path(path).read_bytes()
+    if b[:8] == b"\x89PNG\r\n\x1a\n":
+        return struct.unpack(">II", b[16:24])
+    i = 2
+    while i < len(b):
+        if b[i] != 0xFF:
+            i += 1
+            continue
+        m = b[i + 1]
+        if m in (0xC0, 0xC1, 0xC2, 0xC3, 0xC5, 0xC6, 0xC7, 0xC9, 0xCA, 0xCB, 0xCD, 0xCE, 0xCF):
+            h, w = struct.unpack(">HH", b[i + 5:i + 9])
+            return w, h
+        i += 2 + struct.unpack(">H", b[i + 2:i + 4])[0]
+    sys.exit(f"build_short: can't read the size of {path}")
 
 
 def esc(s):
@@ -60,12 +84,31 @@ def build(spec, out):
                     return s + per * i
             sys.exit(f"build_short: '{w}' is not spoken in line {k + 1}: {x['say']}")
         kind = x["kind"]
+        if kind not in ("face", "page", "shot", "cta"):
+            sys.exit(f"build_short: line {k + 1} has an unknown kind '{kind}'")
         if kind in ("face", "cta"):
             body.append(clip("vig", s, d))
             body.append(clip("silwrap", s, d, f"<div{g}>{sil(f's{k}')}</div>"))
-        if kind == "page":
-            body.append(clip("uiwrap", s, d, f'<img class="page" src="{esc(x["src"])}" alt="">'))
-            if x.get("hl"):
+        if kind == "shot":
+            W, H = img_size(out / x["src"])
+            cx, cy, cw, ch = x.get("crop") or [0, 0, W, H]
+            z = min(SHOT_W / cw, SHOT_H / ch)
+            ww, wh = round(cw * z), round(ch * z)
+            left, top = (1080 - ww) // 2, SHOT_TOP + (SHOT_H - wh) // 2
+            credit = x.get("credit", spec.get("shot_credit", ""))
+            body.append(clip("shotwrap", s, d,
+                             f'<div class="shotcredit" style="top:{top - 46}px">{esc(credit)}</div>'
+                             f'<div class="shotwin" style="left:{left}px;top:{top}px;width:{ww}px;height:{wh}px">'
+                             f'<img src="{esc(x["src"])}" alt="" style="left:{-cx * z:.0f}px;top:{-cy * z:.0f}px;'
+                             f'width:{W * z:.0f}px;height:{H * z:.0f}px"></div>'))
+            for bx, by, bw, bh in x.get("box", []):
+                body.append(clip("shotbox", s + 0.35, d - 0.4, "",
+                                 f"left:{left + (bx - cx) * z - 8:.0f}px;top:{top + (by - cy) * z - 8:.0f}px;"
+                                 f"width:{bw * z + 16:.0f}px;height:{bh * z + 16:.0f}px"))
+        if kind in ("page", "shot"):
+            if kind == "page":
+                body.append(clip("uiwrap", s, d, f'<img class="page" src="{esc(x["src"])}" alt="">'))
+            if kind == "page" and x.get("hl"):
                 rects = json.loads((out / pathlib.Path(x["src"]).with_suffix(".json")).read_text()).get("rects", [])
                 for r in [r for r in rects if r["phrase"] == rects[0]["phrase"]][:3]:   # every line of a wrapped phrase
                     body.append(clip("hlbox", s + 0.35, d - 0.4, "",
@@ -132,6 +175,15 @@ def build(spec, out):
   .cardroom{{position:absolute;inset:0;background:linear-gradient(180deg,var(--ground-2),var(--ground))}}
   .cardsil{{position:absolute;left:-7px;top:{card_top - 1143}px;width:875px;height:1555px}}
   .annot{{background:rgba(18,18,18,.86);padding:14px 20px;border-radius:12px}}
+  .shotwrap{{position:absolute;left:0;top:0;width:1080px;height:1920px;z-index:2;
+     background:linear-gradient(180deg,var(--ground) 0%,var(--ground-2) 100%)}}
+  .shotwin{{position:absolute;overflow:hidden;border-radius:18px;background:#fff;
+     box-shadow:0 0 0 2px rgba(255,255,255,.14),0 24px 60px rgba(0,0,0,.55)}}
+  .shotwin img{{position:absolute;max-width:none;display:block}}
+  .shotcredit{{position:absolute;left:0;width:1080px;text-align:center;font:600 28px var(--font-ui);
+     letter-spacing:.06em;color:rgba(255,255,255,.72)}}
+  .shotbox{{position:absolute;z-index:2;border:7px solid var(--emph-accent);border-radius:14px;
+     box-shadow:0 0 28px color-mix(in srgb, var(--emph-accent) 70%, transparent)}}
   .hookwords{{position:absolute;left:0;top:150px;width:1080px;text-align:center;z-index:6;
      font-family:var(--font-display);font-weight:var(--display-weight);line-height:.95;text-transform:uppercase}}
   .hookwords .hw1{{font-size:170px;color:var(--emph-fill);-webkit-text-fill-color:var(--emph-fill);

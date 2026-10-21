@@ -122,6 +122,11 @@ Recreates: [Guy in a Cube, "What Is Fabric IQ?! Microsoft Fabric's NEW Ontology 
 **Post caption:** What is Fabric IQ? Shared meaning over your OneLake data: semantic models plus an ontology (preview),
 with data agents, Planning and Graph on top. An agent is only as right as your definitions — fix those first. Comment IQ
 for the one-page map. #MicrosoftFabric #PowerBI
+Screens: Microsoft Learn, CC BY 4.0 (cropped, highlighted)
+
+**Built:** `content-machine/scripts/2026-11-09-01-what-is-fabric-iq/` (script, scored hooks, facts, on-screen list,
+one-page map). The example cut `docs/reels/demo/rc3.json` puts a real Learn screenshot or diagram on every line from 2
+to 7, in place of the page shots in the Picture column above.
 
 ---
 

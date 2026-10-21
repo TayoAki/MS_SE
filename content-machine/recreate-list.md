@@ -17,7 +17,7 @@ the cloud container, so the paste is the way.
 |---|---|---|---|---|
 | RC1 | "Can Fabric Apps REPLACE Power BI?" | the same question on 5 channels: 185K (3.3×), 131K (2.3×), 56K (4.0×), 53K (17.1×), 45K (13.6×) | "Can Fabric Apps replace Power BI?" — what it is, what it can do, 3 reasons it won't | scripted, facts checked |
 | RC2 | Storage modes explained: Import vs DirectQuery vs Direct Lake | evergreen across channels and years: Guy in a Cube 428K (2021, approx.), Data with Baraa 40K (2026) | the three modes in 70 s, with the Direct Lake fallback catch | scripted, facts checked |
-| RC3 | "What Is Fabric IQ?! … Explained" | 3 channels: Guy in a Cube 45K (3.2×), Microsoft's own 95 s intro 20K (12×), Informatec 45K | Fabric IQ in 60 s, ending on "an agent is only as right as your definitions" | scripted, facts checked |
+| RC3 | "What Is Fabric IQ?! … Explained" | 3 channels: Guy in a Cube 45K (3.2×), Microsoft's own 95 s intro 20K (12×), Informatec 45K | Fabric IQ in 60 s, ending on "an agent is only as right as your definitions" | scripted, facts checked, example built (`scripts/2026-11-09-01-what-is-fabric-iq/`) |
 | RC4 | "We tested the New Power BI Report Skills" | Guy in a Cube 158K (11.3×) + How to Power BI "The New Power BI Authoring Skills Change Everything" 155K (2.8×) | we run Microsoft's Power BI Report skill on synthetic data and show what it got right and wrong | **needs the test run first** |
 | RC5 | "Why Customers are Rejecting Microsoft Fabric" (+4 follow-ups at 23–28×) | 33K, 112× its channel median | "Why teams push back on Fabric — I read 96 real requests for help" (your community research) | scripted, numbers from your spreadsheet |
 

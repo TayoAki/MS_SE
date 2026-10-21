@@ -1,0 +1,32 @@
+{
+  "name": "rc3-fabric-iq",
+  "_note": "layers-b.png is a copy of layers.png (the same diagram on two beats; HyperFrames warns on one file used twice)",
+  "label": "EXAMPLE · SILHOUETTE = YOU",
+  "shot_credit": "MICROSOFT LEARN · CC BY 4.0",
+  "_sources": "Fabric IQ overview (ms.date 2026-07-08), re-read 2026-10-21. Screenshots and diagrams from Microsoft Learn (MicrosoftDocs/fabric-docs, CC BY 4.0), collected with learn_media.py and cropped. Pages: iq/overview (layers.png, framework.png), iq/ontology/tutorial-0-introduction (ontology-map.png), iq/ontology/overview-tenant-settings (admin-preview.png), iq/ontology/how-to-create-data-agent (agent-chat.png), data-science/data-agent-sharing (publish.png), iq/plan/infobridge-concept-connected-planning (planning.jpg), graph/tutorial-create-graph (graph-new.png)",
+  "lines": [
+    {"say": "What is Fabric IQ? Microsoft's new layer, in sixty seconds.", "kind": "face", "hook": ["FABRIC", "IQ?"]},
+    {"say": "It's not more storage. It's shared meaning over the data you already have in OneLake.", "kind": "shot",
+     "src": "assets/shots/layers.png", "crop": [801, 78, 1355, 1064], "box": [[921, 853, 1131, 287]], "annot": "SHARED\nMEANING"},
+    {"say": "Two core pieces: your semantic models, and an ontology,", "kind": "shot",
+     "src": "assets/shots/layers-b.png", "crop": [801, 78, 1355, 1064], "box": [[880, 400, 1240, 150], [945, 655, 1150, 145]]},
+    {"say": "a map of your business a machine can read.", "kind": "shot",
+     "src": "assets/shots/ontology-map.png", "crop": [240, 25, 1060, 580], "annot": "ONTOLOGY"},
+    {"say": "The ontology is still in preview.", "kind": "shot",
+     "src": "assets/shots/admin-preview.png", "crop": [425, 170, 945, 885], "box": [[468, 328, 462, 60]], "annot": "PREVIEW"},
+    {"say": "On top sit data agents:", "kind": "shot",
+     "src": "assets/shots/framework.png", "crop": [1062, 102, 1376, 1242], "box": [[1316, 109, 1116, 320]]},
+    {"say": "virtual analysts that answer plain-language questions, grounded in those models.", "kind": "shot",
+     "src": "assets/shots/agent-chat.png", "crop": [755, 277, 1755, 562], "box": [[1152, 285, 1354, 72]]},
+    {"say": "You can publish them to Microsoft 365, Copilot Studio, Foundry or your own apps.", "kind": "shot",
+     "src": "assets/shots/publish.png", "crop": [1190, 581, 1083, 549], "annot": "M365 · COPILOT STUDIO\nFOUNDRY · YOUR APPS"},
+    {"say": "Plus Planning for forecasts on the same data,", "kind": "shot",
+     "src": "assets/shots/planning.jpg", "crop": [449, 17, 816, 696], "box": [[724, 25, 157, 42]], "annot": "PLANNING"},
+    {"say": "and Graph for questions about connections.", "kind": "shot",
+     "src": "assets/shots/graph-new.png", "crop": [1163, 128, 1193, 506], "annot": "GRAPH"},
+    {"say": "But an agent is only as right as your definitions.", "kind": "face", "payoff": "definitions"},
+    {"say": "If 'patient' means three things in your models, the agent gives three answers.", "kind": "face", "emph": ["three", "a"]},
+    {"say": "So fix the definitions first. Then add the agent.", "kind": "face", "emph": ["first", "w"]},
+    {"say": "Comment IQ and I'll send you the one-page map of Fabric IQ.", "kind": "cta", "keyword": "IQ"}
+  ]
+}

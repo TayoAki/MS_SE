@@ -3,5 +3,10 @@
   "keyword": "APPS",
   "script": "2026-10-26-01-fabric-apps-vs-power-bi",
   "added": "2026-10-21"
+ },
+ {
+  "keyword": "IQ",
+  "script": "2026-11-09-01-what-is-fabric-iq",
+  "added": "2026-10-21"
  }
 ]

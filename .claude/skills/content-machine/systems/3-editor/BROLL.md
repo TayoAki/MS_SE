@@ -47,6 +47,10 @@ Tall diagrams fill the 9:16 frame best, for example the Direct Lake framing diag
 the one panel the line is about, so the text is big enough to read on a phone. The library sits outside git, so run the
 command again in a new session.
 
+To put a picture on a beat, use a `"kind": "shot"` line in a `docs/reels/demo/build_short.py` spec. Give the crop and
+the highlight boxes in the image's own pixels, and the credit prints above the picture. `docs/reels/demo/rc3.json` is
+a worked example. Pick crops from the full-size image, not the contact sheet.
+
 ## Taking from several videos
 **Yes: ideas, questions, structure and facts.** When the same topic won on several channels (RC1's question won on
 five), one script can draw on all of them:
