@@ -4,6 +4,14 @@ Goal: a short list of content ideas for THIS user's niche, each one real, recent
 they pick the ones they like and system 2 turns them into scripts. The hardest part of posting every day isn't the
 editing, it's knowing what to talk about: this system removes that.
 
+## 0 · Start from the plan, not from a blank page
+Read `~/content-machine/calendar/linkedin-video-plan.md` (this week's row: topic, type, pillar, freebie), `pillars.md`,
+`icp.md` (the pains and words), `swipe/swipe.md` (shapes that worked), `audience-questions.md` (what people asked) and
+`NOTES.md`. The week's three videos — A reach, B authority, C offer — come first; the news and research below sharpen
+them and fill the spare slots. Trend weeks: pick a verified change from the last 7–14 days (step 1–2); none relevant → a
+current-state retest. LinkedIn itself is never scraped: public posts found through web search can be opened and read one
+by one; good ones go into the swipe file by hand.
+
 ## 1 · Scrape what just happened (free sources, no keys)
 ```bash
 node ~/.claude/skills/content-machine/systems/1-news/scrape.mjs --profile ~/content-machine/profile.json --days 7
@@ -30,11 +38,16 @@ Keep the link of everything you use.
 10–20 ideas, best first, each as:
 ```
 ## 7 · <the idea in plain words>                         angle: questions | problem | taboo | news | myth | free-thing
-- Why it works: <one line: who it helps, why now>
+- Funnel: reach | authority | offer · Pillar: P1–P5 · Calendar: week <n> video A|B|C (or "spare")
+- Hook shape: <a swipe row it borrows its shape from, if any>
+- Story / proof: <the story-bank entry or lab result an authority/offer idea stands on — none yet? say so, don't invent>
+- Why it works: <one line: who it helps (a role from icp.md), why now>
 - Source(s): <links>
 - The free thing to DM (if any): <what they'd send people who comment>
 - Format: short (≈30 s) | list (≈50 s) | story / opinion
 ```
 Rules: no idea without a real source; never repeat an idea already in `ideas/seen-ideas.md` (append every idea you show);
-mix the angles (not 10 news items); match the profile's audience and goals. Then ask: **"Which ones do you want? (numbers)"**
+mix the angles (not 10 news items); match the profile's audience and goals; the list opens with this week's A/B/C from
+the calendar; every idea has a funnel job and a pillar; an authority idea with no story or lab result behind it is
+flagged, not padded. Then ask: **"Which ones do you want? (numbers)"**
 and hand the picks to system 2.
