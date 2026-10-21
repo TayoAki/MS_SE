@@ -115,14 +115,14 @@ Modelled on: [Guy in a Cube, "We tested the New Power BI Report Skills"](https:/
 
 | # | Say | Picture | Source |
 |---|---|---|---|
-| 1 | "We counted one month of patients three ways. We got 412, 522 and 946." | face; first frame 412 · 522 · 946 | demo (synthetic) |
+| 1 | "We counted one month of patients three ways. We got 412, 522 and 946." | first frame: a real hospital corridor photo with 412 · 522 · 946, cut to face halfway | demo (synthetic) · photo: W.carter, CC0, Wikimedia Commons |
 | 2 | "Same data. Three queries. Here's what each one actually counted." | face | — |
 | 3 | "Query one: count the rows in the visits table. 522." | screen: the query and its result | demo |
 | 4 | "That's visits, not patients. Anyone who came back is counted again." | hollow word AGAIN | true by construction |
 | 5 | "Query two: join the diagnoses first, then count. 946." | screen: the join query and result | demo |
 | 6 | "Every extra diagnosis on a visit adds another row." | the joined rows, one visit repeated | true by construction |
 | 7 | "Query three: count distinct patient IDs. 412." | screen; display 412; typed note "= patients, not visits" | demo |
-| 8 | "That's the answer to 'how many patients did we see?'" | face | — |
+| 8 | "That's the answer to 'how many patients did we see?'" | a real, empty clinic waiting room owns the frame; display 412 | photo: Harrison Keely, CC BY 4.0, Wikimedia Commons (credit in the post) |
 | 9 | "And even 412 is wrong if one person ended up with two patient IDs." | two demo rows, P0007 and P0391, "same person?" | — (no number claimed) |
 | 10 | "So before a count goes on a dashboard: name the grain, check rows across every join, label the question." | three labels on screen | — |
 | 11 | "Most teams argue about which number is right. The fix is agreeing what each number means." | face; display word MEANS | — |
@@ -137,5 +137,6 @@ Modelled on: [Guy in a Cube, "We tested the New Power BI Report Skills"](https:/
 
 **Post caption:** We counted one month of patients three ways and got 412, 522 and 946. None of the queries is broken —
 each answers a different question: visits, visit-diagnosis rows, patients. Name the grain, check rows across every join,
-label the question. Comment COUNTS for the five checks. (Synthetic data, no real patients.)
+label the question. Comment COUNTS for the five checks. (Synthetic data, no real patients. Waiting-room photo: Harrison
+Keely, CC BY 4.0, via Wikimedia Commons.)
 #PowerBI #MicrosoftFabric #HealthcareAnalytics
