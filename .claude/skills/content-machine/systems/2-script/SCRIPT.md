@@ -3,7 +3,7 @@
 Takes the ideas the user picked and writes each one word for word, ready to read on a teleprompter or from memory.
 Read `~/content-machine/profile.md`, `~/content-machine/voice/voice.md`, `~/content-machine/voice/blacklist.md` (and this
 folder's `blacklist.md` starter) and `~/content-machine/NOTES.md` before writing — plus `icp.md` (hooks in the buyer's own
-words), `pillars.md`, `story-bank.md`, `swipe/swipe.md` and `fabric-field-guide.md` (re-verify any number you take from it).
+words), `hook-bank.md`, `pillars.md`, `story-bank.md`, `swipe/swipe.md` and `fabric-field-guide.md` (re-verify any number you take from it).
 
 ## The LinkedIn beats, spoken (every script)
 The structure that works in LinkedIn posts, said out loud in a 9:16 video:
@@ -17,10 +17,11 @@ The structure that works in LinkedIn posts, said out loud in a 9:16 video:
 A swipe row can lend its shape (beat order, hook pattern, length) — never its words.
 
 ## The pattern (every script)
-1. **Hook — the first 1–3 seconds.** One bold, concrete sentence that stops the scroll. The hook carries the whole context:
-   no greeting, no "in this video", no setup paragraph. Write 3 hooks with 3 DIFFERENT feelings and opening shapes (a
-   number, a change that just happened, a "you don't need X anymore", a "stop doing X", a surprising claim, a question
-   they've asked themselves) and let the user pick.
+1. **Hook — the first 1–3 seconds.** Read `HOOKS.md` first, every time. One concrete sentence that names a specific
+   problem the viewer has had, at a moment they recognise, with a consequence — problem before product, ≤ 12 words to the
+   tension. No greeting, no "in this video", no setup paragraph. Write 3 hooks in 3 DIFFERENT shapes from HOOKS.md (e.g.
+   succeeded-and-still-wrong, two numbers, the scene, the question you can't answer, stop doing X), each with its
+   on-screen fragment (3–6 words) and its scorecard (6 checks). Show only hooks scoring 5–6; let the user pick.
 2. **The value — spread through the whole video, not dumped in the first seconds.** If everything is given away at the
    start, people get what they came for and swipe. Reveal the name/answer after the hook, then give the payoff in steps,
    keeping the best bit for late.
@@ -48,7 +49,8 @@ Words ÷ speaking pace (≈ 180–230 words/min — measure it from their record
 keyword: <WORD> · format: short|list · <words> words · ≈ <seconds> s
 funnel: reach|authority|offer · pillar: P1–P5 · calendar: week <n> video A|B|C · story: <story-bank title or "lab">
 ## Beats             hook → bridge → meat → mic drop → CTA, one line each (the skeleton, before the full text)
-## Hooks (pick one)   1. …  2. …  3. …
+## Hooks (pick one)   1. "<spoken>" · on screen: <3–6 words> · shape: <HOOKS.md shape> · score: <n>/6 · numbers from: <fact|story|demo>
+                     2. …  3. …
 ## Script             (the full spoken text, exactly as they'll say it)
 ## Facts              | claim | value | source link |   ← every number/claim; anything unverified is cut or flagged ⚠
 ## Cover text         <2–4 words from the script> (system 4)

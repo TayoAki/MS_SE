@@ -39,6 +39,9 @@ Keep the link of everything you use.
 ```
 ## 7 · <the idea in plain words>                         angle: questions | problem | taboo | news | myth | free-thing
 - Funnel: reach | authority | offer · Pillar: P1–P5 · Calendar: week <n> video A|B|C (or "spare")
+- The specific problem: <one sentence a viewer could say happened to them — not a topic> · evidence: <community ID, ICP quote, thread>
+- The proof we can show: <the synthetic demo, test, real page or story that resolves it — the gap analysis's rule>
+- Draft hook: <one line in a HOOKS.md shape>; system 2 sharpens it
 - Hook shape: <a swipe row it borrows its shape from, if any>
 - Story / proof: <the story-bank entry or lab result an authority/offer idea stands on — none yet? say so, don't invent>
 - Why it works: <one line: who it helps (a role from icp.md), why now>

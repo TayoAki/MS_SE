@@ -8,6 +8,7 @@ vendor, or a search excerpt — check before quoting on camera), Inference (reas
 | `buyers.md` | who buys and champions at US health systems, priorities, pains in their words, triggers, objections, where they are, vocabulary |
 | `fabric-healthcare.md` | healthcare data solutions in Fabric (incl. the managed-version end of support on 2027-12-31), Epic + Fabric, named health systems on Fabric, practitioner pains, buying signals, competition |
 | `linkedin-video.md` | LinkedIn video specs and rules, the vertical feed, performance data (third-party), who already posts about Fabric/healthcare data, verified RSS feeds |
+| `fabric-content-gap-analysis.html` | your supply-gap audit (Oct 21 2026): which topics already have good answers, six pilots, the "specific unresolved task + proof" rule. **Note:** it was written against a different, cross-industry 52-week calendar (its W01 is capacity throttling), not `calendar/hls-fabric-52-week-calendar.md`; its healthcare themes (W13 grain, W29 access evidence, W30 paginated parameters, W50 spreadsheets) map to HLS pillars P1, P4, P1, P2. Its pitch targets Power BI practitioners and small data teams, not health systems — decide which you lead with. |
 | `fabric-community-research.xlsx` | your Fabric community snapshot: 228 groups, 117 reviewed discussions, 96 counted requests by topic and industry |
 
 Limits: Reddit, Becker's, CHIME and the Fabric Community forum blocked direct fetching from the research container, so

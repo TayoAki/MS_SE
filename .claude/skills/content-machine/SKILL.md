@@ -35,6 +35,7 @@ profile.md / profile.json   who they are, what they sell, platforms, times, scra
 icp.md                      who they talk to: buyers and champions, pains in their words, where they are (research-backed)
 pillars.md                  the 5 themes every video belongs to, each in reach / authority / offer shapes
 story-bank.md               their real stories — the only source for "how I did it" videos
+hook-bank.md                scored hooks per calendar week + evergreen ones (rules: systems/2-script/HOOKS.md)
 fabric-field-guide.md       what they sell and the facts behind it (re-check numbers before quoting)
 calendar/                   the 52-week calendar + linkedin-video-plan.md (each week → videos A/B/C, pillar, freebie)
 swipe/                      posts that already worked (saved by hand) + X factor + templates
@@ -52,7 +53,8 @@ NOTES.md                    every note they give → a rule (see "Notes become r
 ```
 
 ## The LinkedIn strategy (read before running any system)
-1. **Know who you're talking to** — `icp.md`. Hooks use the buyer's own words from it, not ours.
+1. **Know who you're talking to** — `icp.md`. Hooks use the buyer's own words from it, not ours, and name a specific
+   problem at a moment they recognise (`systems/2-script/HOOKS.md`, `hook-bank.md`).
 2. **Stay on 5 pillars** — `pillars.md`. Every idea and script names its pillar.
 3. **The funnel.** Every video has one job:
    - **Reach** ("how to X") — generic enough to share; brings new people.
