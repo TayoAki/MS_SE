@@ -36,6 +36,7 @@ icp.md                      who they talk to: buyers and champions, pains in the
 pillars.md                  the 5 themes every video belongs to, each in reach / authority / offer shapes
 story-bank.md               their real stories — the only source for "how I did it" videos
 hook-bank.md                scored hooks per calendar week + evergreen ones (rules: systems/2-script/HOOKS.md)
+recreate-list.md            proven winners to recreate first (topic + shape, our words), with their numbers
 fabric-field-guide.md       what they sell and the facts behind it (re-check numbers before quoting)
 calendar/                   the 52-week calendar + linkedin-video-plan.md (each week → videos A/B/C, pillar, freebie)
 swipe/                      posts that already worked (saved by hand) + X factor + templates
@@ -62,7 +63,8 @@ NOTES.md                    every note they give → a rule (see "Notes become r
      lab result on synthetic data. Never invented.
    - **Offer** ("how I can do X for you") — the problem, what they do, proof, the next step. For buyers.
    Default week (from `calendar/linkedin-video-plan.md`): one of each. Re-rank after weeks 4, 8 and 13 from the numbers.
-4. **Research what already works, copy the shape not the words** — `swipe/`. X factor = a post's reactions ÷ the
+4. **Research what already works, copy the shape not the words** — `recreate-list.md` first (start by recreating
+   proven winners), then `swipe/`. X factor = a post's reactions ÷ the
    author's usual. Credit anyone whose image idea or framework you reuse closely.
 5. **The profile is the landing page** (system 0) and **comments/DMs are the active half** (system 6) — done by hand.
 6. **Health data rules:** synthetic or approved data only on screen; no client names without written approval; no

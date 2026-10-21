@@ -5,6 +5,9 @@ they pick the ones they like and system 2 turns them into scripts. The hardest p
 editing, it's knowing what to talk about: this system removes that.
 
 ## 0 · Start from the plan, not from a blank page
+**Recreate first.** While the channel is new, the week's ideas start with `~/content-machine/recreate-list.md`: posts that
+already beat their channel's normal, recreated in our words with checked facts (scripts in `docs/reels/`). Calendar
+topics fill the rest. A pasted transcript of a winner → map its beats and rewrite every line (never reuse its words).
 Read `~/content-machine/calendar/linkedin-video-plan.md` (this week's row: topic, type, pillar, freebie), `pillars.md`,
 `icp.md` (the pains and words), `swipe/swipe.md` (shapes that worked), `audience-questions.md` (what people asked) and
 `NOTES.md`. The week's three videos — A reach, B authority, C offer — come first; the news and research below sharpen

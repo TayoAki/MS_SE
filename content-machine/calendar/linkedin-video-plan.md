@@ -3,6 +3,9 @@
 The calendar (`hls-fabric-52-week-calendar.md`) is the WHAT; this file is how each week becomes 9:16 videos on LinkedIn,
 powered by the LinkedIn strategy (pillars, funnel, story bank, swipe file). System 1 reads this file every week.
 
+**Starting out: recreations lead.** Until the channel has its own numbers, video A each week is a recreation from
+`../recreate-list.md` (RC1–RC5 are scripted in `docs/reels/fabric-recreations-scripts.md`); the calendar topic moves to B.
+
 ## Every week = 3 short vertical videos (starting point — re-rank after weeks 4, 8 and 13)
 | Video | Funnel job | Shape | Length | CTA |
 |---|---|---|---|---|
