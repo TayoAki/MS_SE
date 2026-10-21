@@ -28,6 +28,15 @@ if ! "$PRIV/bin/python" -c 'import PIL, numpy, playwright' 2>/dev/null; then
   "$PRIV/bin/python" -m pip install -q --disable-pip-version-check pillow numpy ${PW:+"playwright~=${PW%.*}.0"}
 fi
 
+# yt-dlp for the niche-scripts skill's YouTube research, in its own env, put on PATH for the session.
+NS="$HOME/.cache/niche-scripts/venv"
+if [ ! -x "$NS/bin/yt-dlp" ]; then
+  python3 -m venv "$NS" && "$NS/bin/python" -m pip install -q --disable-pip-version-check yt-dlp || true
+fi
+if [ -n "${CLAUDE_ENV_FILE:-}" ]; then
+  echo "export PATH=\"$NS/bin:\$PATH\"" >> "$CLAUDE_ENV_FILE"
+fi
+
 # The renderer (HyperFrames via npx) and its headless Chrome, the sound palette; prints "All set" when ready.
 if bash "$EDITOR/scripts/doctor.sh" --fix >/dev/null 2>&1; then
   echo "content-machine: skills linked, workspace at ~/content-machine, editor tools All set"
