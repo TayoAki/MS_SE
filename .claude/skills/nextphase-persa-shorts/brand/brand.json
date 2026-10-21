@@ -1,0 +1,22 @@
+{
+  "setup_complete": true,
+  "creator": {
+    "name": "",
+    "handle": "",
+    "niche": "Microsoft Fabric for health systems: turning messy data into reliable reporting - faster loads, fewer manual fixes, one governed platform",
+    "audience": "Health system data and analytics leaders and their BI and data engineering teams, stuck with slow report loads, manual fixes and data spread across too many tools",
+    "cta_keyword": "FABRIC"
+  },
+  "look": "dark",
+  "accent": "green",
+  "brand_colors": [],
+  "font_feel": "poster",
+  "grade": "film",
+  "research": 1,
+  "budget": "balanced",
+  "sfx": true,
+  "music": false,
+  "music_file": "",
+  "cutout": "quick",
+  "videos_dir": "~/persa-shorts"
+}

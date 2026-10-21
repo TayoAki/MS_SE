@@ -1,0 +1,19 @@
+Install the free "Content Machine" Claude Code skill for me (the 5 systems: news, script, editor, cover, posting) and set it up.
+
+1. FIND IT. I downloaded it from Skool / Google Drive. Look in ~/Downloads first, then ~/Desktop, for anything named like "Content-Machine" or "content-machine" (a .zip or a folder; unzip into a temporary folder if needed) until you find the folder content-machine whose SKILL.md starts with "name: content-machine". If you can't find it, ask me where it is.
+
+2. INSTALL IT to ~/.claude/skills/content-machine/ (on Windows use WSL, then the same path inside it). If that folder already exists, rename the old one to content-machine.backup-<today's date> first. Copy the whole folder (SKILL.md, systems/, templates/, SETUP-PROMPT.txt).
+
+3. INSTALL THE EDITOR (system 3). It ships inside the kit as content-machine/systems/3-editor/NextPhase-Persa-Shorts/. Copy its folder skill/nextphase-persa-shorts to ~/.claude/skills/nextphase-persa-shorts/ (rename an existing one to nextphase-persa-shorts.backup-<today's date> first), run chmod +x ~/.claude/skills/nextphase-persa-shorts/scripts/*, then follow steps 3 to 6 of content-machine/systems/3-editor/NextPhase-Persa-Shorts/SETUP-PROMPT.txt (the tools check, its 9 brand questions, saving my brand, the 8-second preview). Ask before any step that needs my password.
+
+4. CHECK THE SCRAPER (system 1): it needs Node.js 18 or newer (the editor's setup already installs Node 22). Run: node ~/.claude/skills/content-machine/systems/1-news/scrape.mjs --help
+
+5. MAKE MY WORKSPACE: create ~/content-machine/ with the folders voice/, ideas/, scripts/, recordings/, edits/, covers/ and an empty NOTES.md.
+
+6. CONNECTORS (I do this part myself — just tell me how, in two lines each):
+   - Blotato for posting (system 5): Claude → Settings → Connectors → add Blotato, then connect my Instagram / TikTok / Facebook inside Blotato. It has a free trial, then a paid plan.
+   - Higgsfield for my AI character on the covers (system 4, optional): Claude → Settings → Connectors → add Higgsfield. It uses credits (pay as you go or a plan). Without it, covers still work with any image tool or a real photo of me.
+
+7. TELL ME in plain words: what you installed and where, what was free and what is optional/paid, and then: start a NEW Claude Code session so the skills load, pick the strongest model (type /model and choose Opus), and say "scrape for me" — the first time it asks me who I am, what I do and who I'm talking to.
+
+Rules: keep everything free unless I say otherwise. Don't change anything outside ~/.claude/skills/content-machine, ~/.claude/skills/nextphase-persa-shorts, ~/content-machine, ~/persa-shorts, ~/.cache/persa-shorts and the free tools listed in the editor's setup. Never publish, post, schedule or upload anything during setup.

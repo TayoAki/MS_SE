@@ -1,0 +1,20 @@
+{
+  "name": "Your name",
+  "handles": { "instagram": "@you", "tiktok": "@you" },
+  "niche": "who you help and with what, in one line",
+  "audience": "who is watching, in one line",
+  "goal": "what the content should bring you (clients, followers, sales)",
+  "language": "en",
+  "platforms": ["instagram", "tiktok", "facebook"],
+  "times": ["09:00", "13:00", "18:00"],
+  "timezone": "Europe/Paris",
+  "videos_per_day": 1,
+  "cta": "comment WORD and I'll send you …",
+  "sources": {
+    "days": 7,
+    "reddit": { "subs": ["askdentists", "Dentistry"], "search": ["teeth whitening"] },
+    "hn": { "search": [] },
+    "github": { "search": [] },
+    "feeds": []
+  }
+}

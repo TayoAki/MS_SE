@@ -1,0 +1,33 @@
+Install the free "Persa Shorts" Claude Code skill for me, set it up for MY brand, and prove it works.
+
+1. FIND IT. I downloaded it (probably from Skool or Google Drive). Look in ~/Downloads first, then ~/Desktop, for anything named like "NextPhase-Persa-Shorts" or "persa". It may be a .zip, a folder, or a .zip inside another .zip. Unzip into a temporary folder as needed until you find the folder skill/nextphase-persa-shorts whose SKILL.md starts with "name: nextphase-persa-shorts". If you can't find it, ask me where it is.
+
+2. INSTALL IT to ~/.claude/skills/nextphase-persa-shorts/ (on Windows use WSL, then the same path inside it). If that folder already exists, rename the old one to nextphase-persa-shorts.backup-<today's date> first. Copy the whole folder (SKILL.md, brand/, assets/, components/, reference/, scripts/, template/, sfx/), then run: chmod +x ~/.claude/skills/nextphase-persa-shorts/scripts/*
+
+3. SET UP THE TOOLS: run  bash ~/.claude/skills/nextphase-persa-shorts/scripts/doctor.sh --fix
+   It checks Node.js 22+, ffmpeg (with x264 + vp9) and Python 3.9+, makes a private Python folder for pillow + numpy if needed, synthesises the royalty-free sound palette, and downloads the free renderer's headless Chrome. If anything is MISSING, install it the free, official way for my computer (Node.js LTS from nodejs.org or Homebrew; ffmpeg with Homebrew, winget or apt; Python from python.org). Ask me before any step that needs my password. Re-run doctor.sh until it prints "All set".
+   Optional extras — explain each in one line and ask me before installing:
+   - Parakeet transcription (faster, Apple Silicon): npx --yes hyperframes models install parakeet
+   - Real page screenshots (~200 MB): bash ~/.claude/skills/nextphase-persa-shorts/scripts/doctor.sh --fix --pages
+   - The "best" head cut-out (RVM, ~1 GB one-time download): bash ~/.claude/skills/nextphase-persa-shorts/scripts/setup-cutout-best.sh
+     (The "quick" cut-out is built in and needs nothing extra — it downloads a ~170 MB model the first time it runs.)
+
+4. ASK ME THESE QUESTIONS as ONE short numbered list, give a default for each, then WAIT for my answers. Do not guess.
+   1) My niche, who watches me, my @handle, and the word people comment to get my thing (CTA keyword).
+   2) Dark or bright look? (dark = white captions + dark labels; bright = dark captions with a light halo + light labels)
+   3) Accent colours: orange, green, blue, purple, pink, red, yellow — or up to 3 exact hex brand colours. (Persa uses three accents, one job each: the filled payoff word, the hollow "pain" word, and a claim typed into an app's empty space.)
+   4) Font feel: poster (condensed, the default) / clean / editorial serif / rounded.
+   5) Film grade: warm film look, or clean natural (no filter)?
+   6) How much research should the AI do? 0 = I bring every file / 1 = light: verify every number and claim + capture real screenshots of each site or product I name / 2 = deep: also find real examples, docs and clips, and flag rights issues.
+   7) Token budget: lean (cheapest) / balanced / max (best quality, most tokens).
+   8) Sound effects on or off? Music on or off (if on, the path to a track I own or have licensed)?
+   9) Head-over-words cut-out: off / quick / best.
+
+5. SAVE MY BRAND. Run ~/.claude/skills/nextphase-persa-shorts/scripts/py ~/.claude/skills/nextphase-persa-shorts/scripts/make-tokens.py with one --set per answer and --set setup_complete=true (the exact keys are in that skill's SKILL.md, "STEP 0"). It regenerates the colours and fonts and prints a contrast table — if any colour says ADJUSTED, tell me which one and why. Then rewrite brand/brand.md in plain words from my answers, including a "what to SHOW when I SAY..." table with 5-8 examples from MY niche.
+
+6. PROVE IT WORKS. Run ~/.claude/skills/nextphase-persa-shorts/scripts/py ~/.claude/skills/nextphase-persa-shorts/scripts/make-preview.py --open
+   It renders an 8-second 9:16 theme preview in my colours and fonts (no recording needed). Look at the contact sheet it prints yourself before telling me it's done, and confirm the mp4 exists.
+
+7. TELL ME in plain words: what you installed and where, that it cost $0, the one recording tip for this style (sit a little further back, with room above my head, and have a real app/site/screen recording to show for ~15 seconds), and 3 things I can ask you now: one that edits a recording, one that changes my colours, and one that re-renders the preview. Also remind me to start a new Claude Code session so the skill loads.
+
+Rules: keep everything free (no paid APIs, credits, accounts or sign-ups). Don't change anything outside ~/.claude/skills/nextphase-persa-shorts, ~/persa-shorts, ~/.cache/persa-shorts and the free tools listed above. Never publish or upload anything.

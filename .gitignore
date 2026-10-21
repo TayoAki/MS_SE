@@ -1,0 +1,10 @@
+# Video and audio are too big for git: hand finished files to the creator in the session instead.
+content-machine/**/*.mp4
+content-machine/**/*.mov
+content-machine/**/*.m4v
+content-machine/**/*.webm
+content-machine/**/*.mkv
+content-machine/**/*.wav
+content-machine/**/*.mp3
+content-machine/**/*.m4a
+__pycache__/
