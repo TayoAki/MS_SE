@@ -108,6 +108,10 @@ Picture column from its `brand/brand.md` "what to SHOW for what they SAY" table.
 Hooks must also pass `.claude/skills/content-machine/systems/2-script/HOOKS.md`. `yt-dlp` lives in `~/.cache/niche-scripts/venv/bin`
 (the SessionStart hook installs it and puts it on PATH); without `SCRAPECREATORS_API_KEY` run `--platforms youtube`.
 With newer yt-dlp, channel listings give the approximate date as `timestamp` only — history.py reads either.
+Footage is the one exception to "copy formats, not content": a clip may be spliced in only when it is licensed
+(Creative Commons Attribution, Microsoft Learn's CC BY 4.0 demos, the creator's own, or written permission), cut
+and credited with `docs/reels/demo/yt_clips.py` (`content-machine/systems/3-editor/BROLL.md`). Words and audio
+are never reused.
 Without the key, `scripts/shorts.py` studies YouTube Shorts: it lists channels' Shorts tabs, ranks each Short against
 its channel's median and pulls four frames per outlier (the first frame plus YouTube's frames at about 25/50/75 %), so
 you can read the formats from pictures. The 2026-10-22 run is `docs/reels/shorts-formats-research.md`, and its result is

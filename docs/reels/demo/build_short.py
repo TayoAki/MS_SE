@@ -14,6 +14,10 @@ The spec lists the script's spoken lines; each line is one beat:
                                                          over the ground; crop and box are in the image's own pixels;
                                                          the credit line above it comes from "credit" or the spec's
                                                          "shot_credit"
+  {"say": "...", "kind": "clip", "src": "assets/clips/x.mp4", "box": [[x, y, w, h]], "fill": false, "media_start": 0}
+                                                         a video cut by yt_clips.py (licence checked, cropped, no audio)
+                                                         playing in the picture area, or the whole frame with "fill";
+                                                         its credit comes from the cut's sidecar x.json
   {"say": "...", "kind": "cta", "keyword": "WORD"}       the call to action; captions drop
 optional on any line: "emph": ["WORD", "w"|"a"] (hollow, on the spoken word), "payoff": "WORD" (filled, on the word),
 "hook": ["LINE 1", "LINE 2"] (big first-frame words: the thumbnail on LinkedIn), "card": {"tag": "#1", "text": "WORDS",
@@ -91,7 +95,7 @@ def build(spec, out):
                     return s + per * i
             sys.exit(f"build_short: '{w}' is not spoken in line {k + 1}: {x['say']}")
         kind = x["kind"]
-        if kind not in ("face", "page", "shot", "cta"):
+        if kind not in ("face", "page", "shot", "clip", "cta"):
             sys.exit(f"build_short: line {k + 1} has an unknown kind '{kind}'")
         if kind in ("face", "cta"):
             body.append(clip("vig", s, d))
@@ -112,7 +116,32 @@ def build(spec, out):
                 body.append(clip("shotbox", s + 0.35, d - 0.4, "",
                                  f"left:{left + (bx - cx) * z - 8:.0f}px;top:{top + (by - cy) * z - 8:.0f}px;"
                                  f"width:{bw * z + 16:.0f}px;height:{bh * z + 16:.0f}px"))
-        if kind in ("page", "shot"):
+        if kind == "clip":   # the <video> is its own timed element: nested in a timed div it renders frozen
+            meta = json.loads((out / pathlib.Path(x["src"]).with_suffix(".json")).read_text())
+            W, H = meta["width"], meta["height"]
+            if meta["duration"] + 0.05 < d:
+                print(f"build_short: line {k + 1}: the clip is {meta['duration']:.1f}s, the line {d:.1f}s; it will hold "
+                      "its last frame", file=sys.stderr)
+            if x.get("fill"):
+                z = max(1080 / W, 1920 / H); ww, wh = 1080, 1920; left = top = 0
+                cx, cy = (W * z - 1080) / 2 / z, (H * z - 1920) / 2 / z
+            else:
+                z = min(SHOT_W / W, shot_h / H); ww, wh = round(W * z), round(H * z)
+                left, top = (1080 - ww) // 2, shot_top + (shot_h - wh) // 2; cx = cy = 0
+            body.append(clip("shotwrap", s, d, "" if x.get("fill") else
+                             f'<div class="shotcredit" style="top:{top - 46}px">{esc(x.get("credit", meta["credit"]))}</div>'))
+            tr[0] += 1
+            body.append(f'<video class="clip shotvid" id="v{tr[0]}" src="{esc(x["src"])}" data-start="{s:.2f}" data-duration="{d:.2f}" '
+                        f'data-media-start="{float(x.get("media_start", 0)):.2f}" data-track-index="{tr[0]}" muted playsinline '
+                        f'style="left:{left}px;top:{top}px;width:{ww}px;height:{wh}px{";border-radius:0" if x.get("fill") else ""}">'
+                        f'</video>')
+            if x.get("fill"):
+                body.append(clip("shotcredit", s, d, esc(x.get("credit", meta["credit"])), "top:72px;z-index:8"))
+            for bx, by, bw, bh in x.get("box", []):
+                body.append(clip("shotbox", s + 0.35, d - 0.4, "",
+                                 f"left:{left + (bx - cx) * z - 8:.0f}px;top:{top + (by - cy) * z - 8:.0f}px;"
+                                 f"width:{bw * z + 16:.0f}px;height:{bh * z + 16:.0f}px"))
+        if kind in ("page", "shot", "clip"):
             if kind == "page":
                 body.append(clip("uiwrap", s, d, f'<img class="page" src="{esc(x["src"])}" alt="">'))
             if kind == "page" and x.get("hl"):
@@ -144,7 +173,7 @@ def build(spec, out):
             tag = f'<span class="ctag">{esc(c["tag"])}</span>' if c.get("tag") else ""
             body.append(clip("numcard", at, e - at, f'{tag}<span class="ctext">{esc(c["text"])}</span>',
                              (f"top:{min(top + wh + 24 if wh < 480 else top + wh - 70, 1010)}px"   # below a short picture
-                              if kind == "shot" else "top:1150px")))
+                              if kind in ("shot", "clip") and not x.get("fill") else "top:1150px")))
         if kind == "cta":
             kw = x["keyword"].upper()
             size = fit(kw + "  ", 250)
@@ -201,6 +230,8 @@ def build(spec, out):
   .shotwin{{position:absolute;overflow:hidden;border-radius:18px;background:#fff;
      box-shadow:0 0 0 2px rgba(255,255,255,.14),0 24px 60px rgba(0,0,0,.55)}}
   .shotwin img{{position:absolute;max-width:none;display:block}}
+  .shotvid{{position:absolute;z-index:2;object-fit:cover;border-radius:18px;
+     box-shadow:0 0 0 2px rgba(255,255,255,.14),0 24px 60px rgba(0,0,0,.55)}}
   .shotcredit{{position:absolute;left:0;width:1080px;text-align:center;font:600 28px var(--font-ui);
      letter-spacing:.06em;color:rgba(255,255,255,.72)}}
   .shotbox{{position:absolute;z-index:2;border:7px solid var(--emph-accent);border-radius:14px;

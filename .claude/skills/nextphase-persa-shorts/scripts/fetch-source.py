@@ -12,7 +12,7 @@ composition) and with a contact sheet beside it, because the thing that disquali
 a webcam bubble in the corner, another creator's captions, YouTube chrome — is only visible if
 you look. See reference/SOURCING.md.
 """
-import argparse, json, pathlib, subprocess, sys, urllib.request
+import shutil, argparse, json, pathlib, subprocess, sys, urllib.request
 
 ap = argparse.ArgumentParser()
 ap.add_argument("kind", choices=["video", "reddit", "x"])
@@ -55,17 +55,20 @@ def contact_sheet(mp4, sheet, n=6):
     for t in tiles: t.unlink()
     tmp.rmdir()
 
+# yt-dlp needs a JavaScript runtime for YouTube now; Node is there wherever the renderer (npx) is
+YTDLP = ["yt-dlp"] + (["--js-runtimes", "node"] if shutil.which("node") else [])
+
 # ── video ────────────────────────────────────────────────────────────────────
 if a.kind == "video":
     if a.probe:
         print("probing four points — look at each before you commit to one")
-        dur_s = subprocess.run(["yt-dlp", "--no-warnings", "--print", "duration", a.url],
+        dur_s = subprocess.run(YTDLP + ["--no-warnings", "--print", "duration", a.url],
                                capture_output=True, text=True).stdout.strip()
         total = float(dur_s or 60)
         for i, frac in enumerate([0.15, 0.35, 0.6, 0.85]):
             t = total * frac
             p = out.with_name(f"{out.stem}-probe{i}.mp4")
-            run(["yt-dlp", "--no-warnings", "-q", "-f", "mp4",
+            run(YTDLP + ["--no-warnings", "-q", "-f", "mp4",
                  "--download-sections", f"*{t:.0f}-{t+2:.0f}", "--force-keyframes-at-cuts",
                  "-o", str(p), a.url])
             print(f"  {p.name}  @ {t/60:.0f}:{t%60:02.0f}")
@@ -74,7 +77,7 @@ if a.kind == "video":
 
     start = secs(a.at)
     raw = out.with_name(out.stem + "-raw.mp4")
-    run(["yt-dlp", "--no-warnings", "-q", "-f", "mp4",
+    run(YTDLP + ["--no-warnings", "-q", "-f", "mp4",
          "--download-sections", f"*{start:.0f}-{start + a.dur:.0f}",
          "--force-keyframes-at-cuts", "-o", str(raw), a.url])
     # 30fps CFR or it drifts off the beat it was cut to

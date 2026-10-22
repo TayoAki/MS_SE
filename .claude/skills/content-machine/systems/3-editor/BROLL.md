@@ -14,7 +14,8 @@ changes.
 | 6 | **Free stock video of places and objects** (Pexels, Pixabay) | Their own free licences. Read the licence page once | download on your computer (both block the cloud container) and drop the file into the session | not required. Keep the link in the script |
 
 Never use: a stranger's face (no stock people, no presenters), hospital names or logos, patient screens, another
-creator's footage, voice or thumbnail, Microsoft logos as decoration, or anything from a client without their written OK.
+creator's voice or thumbnail, their footage unless it is licensed (see
+Splicing below), Microsoft logos as decoration, or anything from a client without their written OK.
 
 ## Your own screen: Microsoft's conditions
 Microsoft's permissions page (microsoft.com/en-us/legal/intellectualproperty/permissions) allows screenshots "in
@@ -68,14 +69,58 @@ thing nobody says." To write one:
 - check every fact on Learn
 - name the creators in the post. Tagging them is a by-hand choice (system 6)
 
-**No: their footage, voice, face or thumbnail.** That includes clips cut together into a montage. If you name a video
-on screen, show its title as your own text card.
+**Their footage: only when it is licensed** (next section). Never their voice, their face or their thumbnail. If you
+name a video on screen, show its title as your own text card.
 
-**Creative Commons videos on YouTube** (search filter: Features → Creative Commons) are legally reusable with credit.
-They still break "copy formats, not content", the uploader may not own everything in them, and they show someone
-else's face or voice. Leave them out unless the creator says otherwise for one exact clip.
+## Splicing real footage and demos (`docs/reels/demo/yt_clips.py`)
+Real product footage moving on screen beats any still. Splice it in when one of these is true:
+| Source | Why it's allowed | How to find it |
+|---|---|---|
+| A YouTube video whose licence reads **"Creative Commons Attribution license (reuse allowed)"** | The uploader licensed it for reuse with credit | YouTube search → Filters → Features → Creative Commons. `yt_clips.py info <url>` reads the licence |
+| **Microsoft Learn's animated demos** (.gif screen recordings in the Fabric docs) | Fabric docs are CC BY 4.0 | 51 on 2026-10-22, in the IQ, data-science and warehouse docs: data agents, ontology as context, Planning, the Capacity Metrics app. `learn_media.py` finds them |
+| **Your own recording** | Yours | `--licence own` |
+| Anything else, with **written permission** from its creator | They said yes | Many creators say yes to a credit and a tag. Record it with `--permission "who, when, where"` |
+
+Creative Commons Fabric videos checked on 2026-10-22:
+| Video | Licence | Usable? |
+|---|---|---|
+| Edu. Inquisitive, "OneLake Security Demo in Fabric" | CC BY | Yes: screen only |
+| Abiola David, "Microsoft Fabric Data Pipeline Masterclass" | CC BY | Screen parts |
+| Lumio Visuals, "Microsoft Fabric Apps: Everything You Need to Know" | CC BY | Mostly motion graphics |
+| Alex The Analyst, "What is Microsoft Fabric?" | CC BY | No: talking head only |
+| MadeForCloud, "Microsoft IQ Explained" | CC BY | No: talking head only |
+
+Most YouTube videos are under the standard licence, Microsoft's own channels included. Those need permission.
+
+**The workflow:**
+```bash
+PY=~/.cache/persa-shorts/py/bin/python
+$PY -I docs/reels/demo/yt_clips.py info "<url>"                          # the licence, before anything else
+$PY -I docs/reels/demo/yt_clips.py scan "<url or file>" <dir> --every 10  # timecoded frame sheets (+ transcript)
+$PY -I docs/reels/demo/yt_clips.py cut "<url or file>" 1:05 5 <out>/assets/clips/x.mp4 --crop x,y,w,h
+```
+Then put `{"kind": "clip", "src": "assets/clips/x.mp4"}` on the line in the `build_short.py` spec. The credit shows
+above the clip, and the post's credit lines are in `assets/clips/credits.json`.
+
+**Cutting rules:**
+- **Crop to the part that matters.** A full 16:9 screen is unreadable at 9:16. Aim for text at least 28 px tall in
+  the frame, which usually means a 2× zoom.
+- **Crop out** faces, profile photos, webcam bubbles, YouTube's interface, watermarks, burned-in captions and logos.
+- **Never use their audio.** Your voice runs over the clip.
+- **Keep clips short:** 3–6 seconds, one idea each.
+
+**YouTube from the cloud container:** licence checks and listings work, but YouTube refuses the downloads (HTTP 403 or
+"confirm you're not a bot"). Do this instead:
+1. Download on your computer:
+   `yt-dlp -f "bv*[height<=1080][ext=mp4]" --download-sections "*1:00-1:30" "<url>"`
+2. Drop the file into the session.
+3. Run `cut` on the file with `--source "<url>" --licence "Creative Commons Attribution"`.
+
+**Excerpts without a licence:** a short excerpt (4–6 s, credited) that you are commenting on relies on fair use. That is
+your call for each clip; note the decision in `~/content-machine/NOTES.md`. Someone else's recording of the Fabric UI
+is still Microsoft's screen, so the screenshot conditions above apply to it too.
 
 ## Credits
-List every picture you use in the script folder's `## On screen` section: file, source, licence. Then put the credit
+List every picture and clip you use in the script folder's `## On screen` section: file, source, licence. Then put the credit
 lines at the end of the `## LinkedIn post` text, after the hashtags, so system 5 posts them. CC BY needs the credit
 in the post. Microsoft's permission needs its line.

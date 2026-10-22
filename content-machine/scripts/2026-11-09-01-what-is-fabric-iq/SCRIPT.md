@@ -56,6 +56,13 @@ DON'T START WITH THE AI AGENT. It is the held title, so the first frame is the L
 The held title runs from the first frame to the call to action: DON'T START WITH / THE AI AGENT. Captions highlight
 the keywords. Learn screenshots (MicrosoftDocs/fabric-docs, CC BY 4.0) are in
 `~/persa-shorts/rc3-v2/assets/shots/`, and the built example is `docs/reels/demo/rc3-v2.json`.
+**v3 (`docs/reels/demo/rc3-v3.json`)** splices real product demos into lines 2, 3 and 9. They are Microsoft Learn's
+animated screen recordings (CC BY 4.0), cut, cropped about 2× and credited with `yt_clips.py`:
+- line 2: an agent planning its SQL ([data-agent-sql-sources](https://learn.microsoft.com/en-us/fabric/data-science/data-agent-sql-sources))
+- line 3: an ontology added as the agent's context ([data-agent-ontology-sources](https://learn.microsoft.com/en-us/fabric/data-science/data-agent-ontology-sources))
+- line 9: tables chosen for an agent ([how-to-create-data-agent](https://learn.microsoft.com/en-us/fabric/data-science/how-to-create-data-agent))
+
+Credits are in `~/persa-shorts/rc3-v3/assets/clips/credits.json`.
 | line | picture | card |
 |---|---|---|
 | 1 | your face, close; the held title | — |
@@ -98,4 +105,4 @@ Meaning first. Agents second.
 Comment IQ and I'll send you the one-page map of Fabric IQ.
 #MicrosoftFabric #PowerBI
 
-Screens: Microsoft Learn, CC BY 4.0 (cropped, highlighted)
+Screens and demo clips: Microsoft Learn, CC BY 4.0 (cropped, highlighted)
