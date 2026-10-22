@@ -17,6 +17,15 @@ The structure that works in LinkedIn posts, said out loud in a 9:16 video:
 A swipe row can lend its shape (beat order, hook pattern, length) — never its words.
 
 ## The pattern (every script)
+0. **Format first.** Pick one format from `~/content-machine/formats.md` (F1–F6) before writing a line. The topic
+   needs its own proof (`recreate-list.md`, the calendar). The format brings the beats, the on-screen devices and the
+   hook pattern of a Short that beat its channel's median. Name both in the script header. Then follow its craft
+   checklist:
+   - the promise on the first frame, held as a title in talking-head formats
+   - a numbered card per step
+   - keyword captions
+   - a picture change every 2–3 s, so lines stay at about 10 words
+   - a close face, and no intro
 1. **Hook — the first 1–3 seconds.** Read `HOOKS.md` first, every time. One concrete sentence that names a specific
    problem the viewer has had, at a moment they recognise, with a consequence — problem before product, ≤ 12 words to the
    tension. No greeting, no "in this video", no setup paragraph. Write 3 hooks in 3 DIFFERENT shapes from HOOKS.md (e.g.
@@ -46,7 +55,7 @@ Words ÷ speaking pace (≈ 180–230 words/min — measure it from their record
 ## Output — `~/content-machine/scripts/<date>-<nn>-<slug>/SCRIPT.md`
 ```
 # <title>
-keyword: <WORD> · format: short|list · <words> words · ≈ <seconds> s
+keyword: <WORD> · format: F1–F6 <name>, modelled on <channel "title" views, ×> · <words> words · ≈ <seconds> s
 funnel: reach|authority|offer · pillar: P1–P5 · calendar: week <n> video A|B|C · story: <story-bank title or "lab">
 ## Beats             hook → bridge → meat → mic drop → CTA, one line each (the skeleton, before the full text)
 ## Hooks (pick one)   1. "<spoken>" · on screen: <3–6 words> · shape: <HOOKS.md shape> · score: <n>/6 · numbers from: <fact|story|demo>

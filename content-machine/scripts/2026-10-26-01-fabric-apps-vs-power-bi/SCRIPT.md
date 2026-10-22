@@ -1,5 +1,6 @@
 # Can Fabric Apps replace Power BI?
-keyword: APPS · format: short · 150 words · ≈ 57 s
+keyword: APPS · format: F3 X vs Y with the title held, modelled on Alex The Analyst "Data Analyst vs Business Analyst"
+(215K, 11.3× his Shorts median), numbered cards from F2 (`content-machine/formats.md`) · 150 words · ≈ 53 s
 funnel: reach · pillar: P2 · calendar: week 1 video A (recreation RC1) · story: none (docs-led)
 recreates: Guy in a Cube "Can Fabric Apps REPLACE Power BI?" (55,987 views, 4.0× channel median) and the same question on
 four more channels — `content-machine/recreate-list.md`, inspo board https://claude.ai/artifact/QbNCXv6ohGPRSfjCkpWryF
@@ -45,13 +46,16 @@ Comment APPS and I'll send you the one-page comparison.
 ⚠ If Fabric Apps is GA by filming day, rewrite line 8.
 
 ## Cover text
-POWER BI / DONE? (first frame = the LinkedIn thumbnail; the inspo board shows why: 2–4 big words plus your face)
+FABRIC APPS vs POWER BI. It is the held title (v2), on screen from the first frame to the call to action, so the first
+frame is the LinkedIn thumbnail. v1 used POWER BI / DONE? as big first-frame words: `docs/reels/demo/rc1.json`.
 
 ## On screen
 real 9:16 Microsoft Learn page shots, phrase highlighted on the word (already shot, in `~/persa-shorts/rc1-fabric-apps/
 assets/pages/`): overview intro · key features · connectors · queries and mutations · Create a Fabric app with Claude Code ·
 tenant admin settings · pricing "How billing works". Best upgrade: 10–15 s of your own screen — the Fabric Apps item in
-your demo workspace, or an app you scaffolded — over lines 2–5. Built example: `docs/reels/demo/rc1.json`.
+your demo workspace, or an app you scaffolded — over lines 2–5. Built example: `docs/reels/demo/rc1-v2.json`
+(v2: the held title, a numbered card on each reason (#1 IT'S CODE, #2 PREVIEW, #3 BILLS YOUR CAPACITY), keywords in the
+accent colour, timed at 3 words a second). v1: `docs/reels/demo/rc1.json`.
 Licences (`systems/3-editor/BROLL.md`): the Learn page shots are CC BY 4.0, credited in the post. Fabric Apps is in
 preview, so Microsoft's screenshot permission doesn't cover your own screen of it. Filming it relies on fair use: decide
 before you record.

@@ -7,7 +7,9 @@ editing, it's knowing what to talk about: this system removes that.
 ## 0 · Start from the plan, not from a blank page
 **Recreate first.** While the channel is new, the week's ideas start with `~/content-machine/recreate-list.md`: posts that
 already beat their channel's normal, recreated in our words with checked facts (scripts in `docs/reels/`). Calendar
-topics fill the rest. A pasted transcript of a winner → map its beats and rewrite every line (never reuse its words). The same topic winning
+topics fill the rest. A pasted transcript of a winner → map its beats and rewrite every line (never reuse its words). Each recreation also takes
+a format from `~/content-machine/formats.md`: the topic is proven by `recreate-list.md`, the structure by a Short that beat
+its channel's median. The same topic winning
 on several channels → one roundup script built from all of them (`systems/3-editor/BROLL.md`, "Taking from several
 videos").
 Read `~/content-machine/calendar/linkedin-video-plan.md` (this week's row: topic, type, pillar, freebie), `pillars.md`,

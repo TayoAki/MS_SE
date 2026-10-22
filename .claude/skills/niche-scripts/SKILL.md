@@ -107,6 +107,10 @@ Picture column from its `brand/brand.md` "what to SHOW for what they SAY" table.
 `content-machine/fabric-field-guide.md`, `content-machine/icp.md` and the pages they cite, re-opened.
 Hooks must also pass `.claude/skills/content-machine/systems/2-script/HOOKS.md`. `yt-dlp` lives in `~/.cache/niche-scripts/venv/bin`
 (the SessionStart hook installs it and puts it on PATH); without `SCRAPECREATORS_API_KEY` run `--platforms youtube`.
-With newer yt-dlp, channel listings give the approximate date as `timestamp` only — history.py reads either. After saving, add each
+With newer yt-dlp, channel listings give the approximate date as `timestamp` only — history.py reads either.
+Without the key, `scripts/shorts.py` studies YouTube Shorts: it lists channels' Shorts tabs, ranks each Short against
+its channel's median and pulls four frames per outlier (the first frame plus YouTube's frames at about 25/50/75 %), so
+you can read the formats from pictures. The 2026-10-22 run is `docs/reels/shorts-formats-research.md`, and its result is
+`content-machine/formats.md`: scripts here pick a format (F1–F6) from it before they are written. After saving, add each
 script to the content machine as `content-machine/scripts/<date>-<nn>-<slug>/SCRIPT.md` when the
 person picks it.

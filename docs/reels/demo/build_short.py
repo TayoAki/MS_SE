@@ -16,7 +16,10 @@ The spec lists the script's spoken lines; each line is one beat:
                                                          "shot_credit"
   {"say": "...", "kind": "cta", "keyword": "WORD"}       the call to action; captions drop
 optional on any line: "emph": ["WORD", "w"|"a"] (hollow, on the spoken word), "payoff": "WORD" (filled, on the word),
-"hook": ["LINE 1", "LINE 2"] (big first-frame words: the thumbnail on LinkedIn).
+"hook": ["LINE 1", "LINE 2"] (big first-frame words: the thumbnail on LinkedIn), "card": {"tag": "#1", "text": "WORDS",
+"on": "word"} (a numbered card that pops in on the word), "key": ["word", ...] (caption words drawn in the accent).
+optional on the spec: "header": "LINE 1\nLINE 2" (the promise, held on screen from the first frame to the call to
+action: muted viewers always know what they're watching), "pace" (words per second, default 2.75).
 Images are paths inside <out>. Brand tokens come from the nextphase-persa-shorts skill.
 """
 import argparse, html, json, os, pathlib, shutil, struct, sys
@@ -58,6 +61,10 @@ def build(spec, out):
     g = ' class="graded"' if brand.get("grade", "film") == "film" else ""
     gcls = " graded" if g else ""
 
+    pace = spec.get("pace", PACE)
+    header = spec.get("header")
+    shot_top, shot_h = (330, 740) if header else (SHOT_TOP, SHOT_H)
+    disp_top = 380 if header else 300
     tr = [20]
     def clip(cls, s, d, inner="", style=""):
         tr[0] += 1
@@ -75,7 +82,7 @@ def build(spec, out):
     body, caps, t = [], [], 0.0
     for k, x in enumerate(spec["lines"]):
         words = x["say"].replace(":", "").split()
-        d = max(1.6, len(words) / PACE)
+        d = max(1.6, len(words) / pace)
         s, e = t, t + d
         per = d / len(words)
         def on_word(w):
@@ -92,9 +99,9 @@ def build(spec, out):
         if kind == "shot":
             W, H = img_size(out / x["src"])
             cx, cy, cw, ch = x.get("crop") or [0, 0, W, H]
-            z = min(SHOT_W / cw, SHOT_H / ch)
+            z = min(SHOT_W / cw, shot_h / ch)
             ww, wh = round(cw * z), round(ch * z)
-            left, top = (1080 - ww) // 2, SHOT_TOP + (SHOT_H - wh) // 2
+            left, top = (1080 - ww) // 2, shot_top + (shot_h - wh) // 2
             credit = x.get("credit", spec.get("shot_credit", ""))
             body.append(clip("shotwrap", s, d,
                              f'<div class="shotcredit" style="top:{top - 46}px">{esc(credit)}</div>'
@@ -121,15 +128,23 @@ def build(spec, out):
             body.append(clip("cardhead", s, d, f"<div{g}>{sil(f'h{k}')}</div>"))
         if x.get("hook"):
             a, b = x["hook"]
-            body.append(clip("hookwords", s, d, f'<div class="hw1">{esc(a)}</div><div class="hw2">{esc(b)}</div>'))
+            body.append(clip("hookwords", s, d, f'<div class="hw1">{esc(a)}</div><div class="hw2">{esc(b)}</div>',
+                             f"top:{disp_top - 150 + 30}px" if header else ""))
         if x.get("emph"):
             w, tone = x["emph"]
             at = max(s, on_word(w) - 0.5)
-            body.append(clip(f"emph e-{tone}", at, max(1.0, min(1.6, e - at)), esc(w.upper()), f"top:300px;font-size:{fit(w)}px"))
+            body.append(clip(f"emph e-{tone}", at, max(1.0, min(1.6, e - at)), esc(w.upper()), f"top:{disp_top}px;font-size:{fit(w)}px"))
         if x.get("payoff"):
             w = x["payoff"]
             at = max(s, on_word(w) - 0.5)
-            body.append(clip("payoff", at, max(1.0, e - at), esc(w.upper()), f"top:300px;font-size:{fit(w)}px"))
+            body.append(clip("payoff", at, max(1.0, e - at), esc(w.upper()), f"top:{disp_top}px;font-size:{fit(w)}px"))
+        if x.get("card"):
+            c = x["card"]
+            at = max(s, on_word(c["on"]) - 0.15) if c.get("on") else s + 0.2
+            tag = f'<span class="ctag">{esc(c["tag"])}</span>' if c.get("tag") else ""
+            body.append(clip("numcard", at, e - at, f'{tag}<span class="ctext">{esc(c["text"])}</span>',
+                             (f"top:{min(top + wh + 24 if wh < 480 else top + wh - 70, 1010)}px"   # below a short picture
+                              if kind == "shot" else "top:1150px")))
         if kind == "cta":
             kw = x["keyword"].upper()
             size = fit(kw + "  ", 250)
@@ -137,13 +152,19 @@ def build(spec, out):
                                                        f'style="font-size:{size}px">&ldquo;{esc(kw)}&rdquo;</div>'))
             body.append(clip("ctaarrow", s + 0.1, d - 0.1, "<i></i>", f"top:{170 + 82 + 26 + round(size * 0.9) + 30}px"))
         else:   # captions drop on the CTA
+            keys = {k.upper() for k in x.get("key", [])}
             for i, w in enumerate(words):
+                hot = ";color:var(--emph-accent)" if w.strip(".,'?!\"").upper() in keys else ""
                 caps.append(f'<div class="clip cap" data-start="{s + i * per:.2f}" data-duration="{per * 0.92:.2f}" '
-                            f'data-track-index="{900 + (len(caps) % 2)}" style="top:1400px">{esc(w.strip(".,"))}</div>')
+                            f'data-track-index="{900 + (len(caps) % 2)}" style="top:1400px{hot}">{esc(w.strip(".,"))}</div>')
         t = e + GAP
     total = round(t - GAP, 2)
     body.insert(0, f'<div class="clip stage" data-start="0" data-duration="{total}" data-track-index="1">{room}</div>')
     body.append(clip("label", 0, total, esc(spec.get("label", "EXAMPLE · THE SILHOUETTE STANDS IN FOR YOU"))))
+    if header:
+        cta_at = next((round(sum(max(1.6, len(y["say"].replace(":", "").split()) / pace) + GAP for y in spec["lines"][:i]), 2)
+                       for i, y in enumerate(spec["lines"]) if y["kind"] == "cta"), total)
+        body.append(clip("header", 0, cta_at, esc(header).replace("\n", "<br>")))
 
     grade_svg = (SKILL / "components/grade-persa.svg").read_text() if g else ""
     card_top = 1143 - 120 - round(600 * 0.81)
@@ -184,6 +205,16 @@ def build(spec, out):
      letter-spacing:.06em;color:rgba(255,255,255,.72)}}
   .shotbox{{position:absolute;z-index:2;border:7px solid var(--emph-accent);border-radius:14px;
      box-shadow:0 0 28px color-mix(in srgb, var(--emph-accent) 70%, transparent)}}
+  .header{{position:absolute;left:70px;top:96px;width:940px;z-index:8;text-align:center}}
+  .header{{font:800 60px/1.1 var(--font-ui);color:#111;letter-spacing:-.01em;text-transform:uppercase;
+     background:#fff;border-radius:16px;padding:18px 24px;box-shadow:0 10px 30px rgba(0,0,0,.45)}}
+  .numcard{{position:absolute;left:0;width:1080px;z-index:8;text-align:center;white-space:nowrap}}
+  .numcard .ctag,.numcard .ctext{{display:inline-block;vertical-align:middle;font-family:var(--font-display);
+     font-weight:var(--display-weight);text-transform:uppercase;line-height:1;padding:16px 26px 12px}}
+  .numcard .ctag{{font-size:84px;background:var(--emph-accent);color:#111;border-radius:14px 0 0 14px}}
+  .numcard .ctext{{font-size:84px;background:#fff;color:#111;border-radius:0 14px 14px 0;
+     box-shadow:0 12px 30px rgba(0,0,0,.45)}}
+  .numcard .ctext:only-child{{border-radius:14px}}
   .hookwords{{position:absolute;left:0;top:150px;width:1080px;text-align:center;z-index:6;
      font-family:var(--font-display);font-weight:var(--display-weight);line-height:.95;text-transform:uppercase}}
   .hookwords .hw1{{font-size:170px;color:var(--emph-fill);-webkit-text-fill-color:var(--emph-fill);
@@ -207,7 +238,7 @@ def build(spec, out):
     (out / "index.html").write_text(doc)
     mids, t2 = [], 0.0
     for x in spec["lines"]:
-        d = max(1.6, len(x["say"].replace(":", "").split()) / PACE); mids.append(round(t2 + d / 2, 2)); t2 += d + GAP
+        d = max(1.6, len(x["say"].replace(":", "").split()) / pace); mids.append(round(t2 + d / 2, 2)); t2 += d + GAP
     print(json.dumps({"duration": total, "beat_middles": mids}))
 
 

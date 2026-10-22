@@ -21,6 +21,16 @@ the cloud container, so the paste is the way.
 | RC4 | "We tested the New Power BI Report Skills" | Guy in a Cube 158K (11.3×) + How to Power BI "The New Power BI Authoring Skills Change Everything" 155K (2.8×) | we run Microsoft's Power BI Report skill on synthetic data and show what it got right and wrong | **needs the test run first** |
 | RC5 | "Why Customers are Rejecting Microsoft Fabric" (+4 follow-ups at 23–28×) | 33K, 112× its channel median | "Why teams push back on Fabric — I read 96 real requests for help" (your community research) | scripted, numbers from your spreadsheet |
 
+### The format each recreation uses (`formats.md`)
+The topic proof is the row above. The format proof is a Short that beat its own channel's median.
+| RC | Format | Modelled on | Status |
+|---|---|---|---|
+| RC1 | F3 X vs Y, title held: FABRIC APPS vs POWER BI, three numbered reasons | Alex The Analyst "Data Analyst vs Business Analyst" (215K, 11.3×) | v2 example built: `docs/reels/demo/rc1-v2.json` |
+| RC2 | F2 ladder: Import → DirectQuery → Direct Lake, slowest to fastest, plus the fallback catch | MyOnlineTrainingHub "3 Ways to Sum Data / Beginner to Advanced" (3.5M, 103×) | to rewrite |
+| RC3 | F1 "Don't start with the AI agent", then #1 definitions, #2 ontology, #3 agent | Alex The Analyst "Don't jump into Power BI first" (740K, 38.9×) | v2 example built: `docs/reels/demo/rc3-v2.json` |
+| RC4 | F4 wrong way → fast way, on your own screen | Leila Gharani "Delete Empty Rows" (1.9M, 25.7×) | needs the test run |
+| RC5 | F5 the blunt question: "Why do teams push back on Fabric? Honestly…" | Seattle Data Guy "Is Data Engineering Still A Good Career Choice?" (115K, 12.5×) | to rewrite |
+
 ## Backlog (proven, not scripted yet)
 | Recreates | Proof | Note |
 |---|---|---|

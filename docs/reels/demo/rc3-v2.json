@@ -1,0 +1,29 @@
+{
+  "name": "rc3-v2-dont-start-with-the-agent",
+  "label": "EXAMPLE · SILHOUETTE = YOU",
+  "header": "DON'T START WITH\nTHE AI AGENT",
+  "pace": 3.0,
+  "shot_credit": "MICROSOFT LEARN · CC BY 4.0",
+  "_format": "F1 'Don't start with X' (formats.md): modelled on Alex The Analyst 'Don't jump into Power BI first' (740K, 38.9x his Shorts median) and Data with Baraa 'Don't Become a Data Analyst!' (476K, 26.4x); numbered cards from F2. Topic proof: RC3 (What is Fabric IQ?, 3 channels).",
+  "_sources": "Fabric IQ overview (ms.date 2026-07-08), re-read 2026-10-21; screenshots from Microsoft Learn (CC BY 4.0), see rc3.json. 412/522/946: docs/reels/demo/synthetic_month.py.",
+  "lines": [
+    {"say": "Don't give your hospital an AI agent before you fix this.", "kind": "face", "key": ["AI", "agent"]},
+    {"say": "Fabric IQ puts data agents on top of your data: virtual analysts you ask in plain English.", "kind": "shot",
+     "src": "assets/shots/framework.png", "crop": [1062, 102, 1376, 1242], "box": [[1316, 109, 1116, 320]], "key": ["agents", "plain", "English"]},
+    {"say": "They answer from your semantic models and your ontology.", "kind": "shot",
+     "src": "assets/shots/layers.png", "crop": [801, 78, 1355, 1064], "box": [[880, 400, 1240, 150], [945, 655, 1150, 145]], "key": ["semantic", "models", "ontology"]},
+    {"say": "So if 'patient' means three things in your models, you get three answers.", "kind": "face",
+     "card": {"tag": "PATIENTS", "text": "412 · 522 · 946", "on": "three"}, "key": ["three", "answers"]},
+    {"say": "Here's the order that works.", "kind": "face", "payoff": "order"},
+    {"say": "One: agree on one definition per word, and put it in the semantic model.", "kind": "face",
+     "card": {"tag": "#1", "text": "ONE DEFINITION"}, "key": ["definition"]},
+    {"say": "Two: build the ontology from that model, a map of your business a machine can read.", "kind": "shot",
+     "src": "assets/shots/ontology-map.png", "crop": [240, 25, 1060, 580], "card": {"tag": "#2", "text": "ONTOLOGY"}, "key": ["ontology"]},
+    {"say": "It's still in preview, so test it on synthetic data.", "kind": "shot",
+     "src": "assets/shots/admin-preview.png", "crop": [425, 170, 945, 885], "box": [[468, 328, 462, 60]], "key": ["preview", "synthetic"]},
+    {"say": "Three: then add the agent. One domain, tested on questions you already know the answers to.", "kind": "shot",
+     "src": "assets/shots/agent-chat.png", "crop": [755, 277, 1755, 562], "box": [[1152, 285, 1354, 72]], "card": {"tag": "#3", "text": "THEN THE AGENT"}, "key": ["agent"]},
+    {"say": "Meaning first. Agents second.", "kind": "face", "payoff": "first"},
+    {"say": "Comment IQ and I'll send you the one-page map of Fabric IQ.", "kind": "cta", "keyword": "IQ"}
+  ]
+}
