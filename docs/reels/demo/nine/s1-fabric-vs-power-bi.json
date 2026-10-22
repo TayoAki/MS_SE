@@ -1,0 +1,134 @@
+{
+ "name": "s1-fabric-vs-power-bi",
+ "label": "EXAMPLE · AI STAND-IN VOICE · NO FACE",
+ "lines": [
+  {
+   "say": "Microsoft Fabric or Power BI: which one should you learn?",
+   "kind": "cover",
+   "big": [
+    "FABRIC",
+    "OR POWER BI?"
+   ]
+  },
+  {
+   "say": "It's the wrong question.",
+   "kind": "text",
+   "show": "It's the *wrong question*."
+  },
+  {
+   "say": "Power BI isn't competing with Fabric. Power BI is inside Fabric.",
+   "kind": "shot",
+   "src": "assets/shots/fabric-arch.png",
+   "credit": "MICROSOFT LEARN · CC BY 4.0",
+   "box": [
+    [
+     1325,
+     305,
+     227,
+     228
+    ]
+   ],
+   "key": [
+    "inside"
+   ]
+  },
+  {
+   "say": "Fabric is the whole kitchen: getting data in, storing it, cleaning it, and serving it.",
+   "kind": "stack",
+   "items": [
+    [
+     "GET DATA IN",
+     "getting"
+    ],
+    [
+     "STORE IT",
+     "storing"
+    ],
+    [
+     "CLEAN IT",
+     "cleaning"
+    ],
+    [
+     "SERVE IT",
+     "serving"
+    ]
+   ]
+  },
+  {
+   "say": "Everything lands in one lake, OneLake, as open Delta tables.",
+   "kind": "shot",
+   "src": "assets/shots/onelake-engines.png",
+   "credit": "MICROSOFT LEARN · CC BY 4.0",
+   "box": [
+    [
+     288,
+     348,
+     852,
+     95
+    ]
+   ],
+   "key": [
+    "OneLake,",
+    "Delta"
+   ]
+  },
+  {
+   "say": "Then Power BI reads those tables directly. That's Direct Lake. No import copy, and a refresh only copies metadata.",
+   "kind": "shot",
+   "src": "assets/pages/directlake.png",
+   "crop": [
+    0,
+    640,
+    1080,
+    760
+   ],
+   "credit": "MICROSOFT LEARN",
+   "box": [
+    [
+     31,
+     941,
+     312,
+     39
+    ]
+   ],
+   "key": [
+    "Direct",
+    "Lake.",
+    "metadata."
+   ]
+  },
+  {
+   "say": "So if you already know Power BI, you're not starting over. You're one layer up from where Fabric starts.",
+   "kind": "text",
+   "show": "You're not starting over. You're *one layer up*."
+  },
+  {
+   "say": "Learn the lakehouse, a little SQL, and how data gets into OneLake.",
+   "kind": "stack",
+   "items": [
+    [
+     "THE LAKEHOUSE",
+     "lakehouse,"
+    ],
+    [
+     "A LITTLE SQL",
+     "SQL,"
+    ],
+    [
+     "DATA INTO ONELAKE",
+     "OneLake."
+    ]
+   ]
+  },
+  {
+   "say": "That's the difference between a report builder and the person who owns the data.",
+   "kind": "text",
+   "show": "Report builder vs. the person who *owns the data*."
+  },
+  {
+   "say": "Comment FABRIC and I'll send you the free learning path I'd follow.",
+   "kind": "cta",
+   "keyword": "FABRIC"
+  }
+ ]
+}

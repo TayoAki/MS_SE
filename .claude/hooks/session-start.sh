@@ -37,6 +37,15 @@ if [ -n "${CLAUDE_ENV_FILE:-}" ]; then
   echo "export PATH=\"$NS/bin:\$PATH\"" >> "$CLAUDE_ENV_FILE"
 fi
 
+# The free local AI stand-in voice for example cuts (docs/reels/demo/voice.py): Kokoro in the private env; the
+# renderer's own `hyperframes tts` downloads the model on first use and finds the packages through HYPERFRAMES_PYTHON.
+if ! "$PRIV/bin/python" -c 'import kokoro_onnx, soundfile' 2>/dev/null; then
+  "$PRIV/bin/python" -m pip install -q --disable-pip-version-check kokoro-onnx soundfile || true
+fi
+if [ -n "${CLAUDE_ENV_FILE:-}" ]; then
+  echo "export HYPERFRAMES_PYTHON=\"$PRIV/bin/python\"" >> "$CLAUDE_ENV_FILE"
+fi
+
 # The renderer (HyperFrames via npx) and its headless Chrome, the sound palette; prints "All set" when ready.
 if bash "$EDITOR/scripts/doctor.sh" --fix >/dev/null 2>&1; then
   echo "content-machine: skills linked, workspace at ~/content-machine, editor tools All set"

@@ -1,0 +1,87 @@
+{
+ "name": "s2-free-dp700-path",
+ "label": "EXAMPLE · AI STAND-IN VOICE · NO FACE",
+ "lines": [
+  {
+   "say": "Microsoft gave away free Fabric certification exams this summer.",
+   "kind": "cover",
+   "big": [
+    "FREE FABRIC",
+    "EXAMS"
+   ],
+   "sub": "this summer"
+  },
+  {
+   "say": "And most people missed it because they weren't ready.",
+   "kind": "text",
+   "show": "Most people *missed it*. They weren't ready."
+  },
+  {
+   "say": "The last round, Fabric Data Days, closed in August.",
+   "kind": "text",
+   "show": "Fabric Data Days: *closed in August*."
+  },
+  {
+   "say": "To get a voucher you had to join the Fabric Community, watch sessions and finish Microsoft Learn modules.",
+   "kind": "stack",
+   "items": [
+    [
+     "JOIN THE COMMUNITY",
+     "join"
+    ],
+    [
+     "WATCH SESSIONS",
+     "watch"
+    ],
+    [
+     "FINISH LEARN MODULES",
+     "finish"
+    ]
+   ]
+  },
+  {
+   "say": "So here's how to be ready before the next one drops.",
+   "kind": "text",
+   "show": "Be ready for *the next one*."
+  },
+  {
+   "say": "One: pick DP-700, the Fabric Data Engineer exam, or DP-600 if you're a Power BI person.",
+   "kind": "num",
+   "n": "1",
+   "title": "PICK YOUR EXAM",
+   "sub": "DP-700 Data Engineer · DP-600 if you're a Power BI person",
+   "tts": "One: pick D P seven hundred, the Fabric Data Engineer exam, or D P six hundred if you're a Power B I person."
+  },
+  {
+   "say": "Two: do the free Microsoft Learn path for it now. It's the same content the vouchers asked for.",
+   "kind": "num",
+   "n": "2",
+   "title": "DO THE FREE PATH",
+   "sub": "on Microsoft Learn, now"
+  },
+  {
+   "say": "Three: take the free practice assessment until you pass it twice.",
+   "kind": "shot",
+   "src": "assets/pages/dp700.png",
+   "crop": [
+    0,
+    0,
+    1080,
+    560
+   ],
+   "credit": "MICROSOFT LEARN",
+   "pill": "3 · PRACTICE ASSESSMENT"
+  },
+  {
+   "say": "Then when the vouchers come back, you claim one and book the exam the same week.",
+   "kind": "text",
+   "show": "Vouchers back? Claim one. *Book that week.*"
+  },
+  {
+   "say": "Follow so you hear about the next round the day it opens.",
+   "kind": "cta",
+   "text": "FOLLOW",
+   "pre": "for the next round"
+  }
+ ]
+}

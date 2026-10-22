@@ -143,6 +143,63 @@ millions of views. Bringing them to Fabric for health systems is our edge.
    3 words a second.
 8. **End on one ask**: our comment keyword.
 
+## House style: built like Parker Prompts (studied 2026-10-22)
+[Parker Prompts](https://www.youtube.com/@parkerprompts/videos) has 134K subscribers and 83 long AI tutorials. Its median
+is 47K views and its best is 783K ("I Tried Google's 7 FREE AI Tools"). We read the descriptions and one full
+transcript, and looked at the thumbnails, YouTube's own frames and the storyboard tiles.
+
+**The opening, in 15 seconds:**
+1. A personal test: "I spent the last month testing every free AI tool Google has released".
+2. A low expectation: "expecting them to be mediocre at best".
+3. The twist: "what I found was shocking".
+4. The number against the cost: "seven… outperforming paid alternatives that cost $20 to $50 a month".
+5. The promise, then straight into item 1.
+
+**Each item:**
+1. "Tool number N is X, at this address."
+2. Reassurance: "don't let that scare you".
+3. The exact click path.
+4. A live demo with a concrete prompt.
+5. "Watch what happens."
+6. The result, described in detail.
+7. The payoff: "where you'd normally pay for this, it's free".
+
+He signposts every step: "tool number two", "moving on to…", "and finally".
+
+**The look alternates between two worlds:**
+1. **A bright talking head** on a warm wooden set. A name tag slides in when a tool is introduced.
+2. **A dark product world:**
+   - full-screen screen recordings, with his face in a small round bubble top right
+   - one-sentence text cards with the key words lit
+   - a giant glowing outlined number for the count
+   - tool name cards
+   - the product's own illustrations
+   - the finished result shown on white
+
+The picture changes every 3–5 seconds. Captions are small, with one word lit.
+
+**The packaging:**
+- **Title formulas:**
+  - "How to use X better than 99% of people"
+  - "Google's 6-hour course in 10 minutes"
+  - "I tried Google's 7 free tools"
+  - "X vs Y vs Z: which $20 plan is worth it?"
+  - "Why I switched from X to Y"
+  - "Give me 9 minutes, become dangerously good at X"
+- **Thumbnails:** his face big, 3D app icons, 2–3 bold words, a dark gradient.
+
+**The funnel:** each video gives away its own free resource ("The $20 AI Plan Scorecard"). One standing offer link
+is tagged with the video, plus "Watch next" links. That is our comment keyword plus a DELIVERABLE.
+
+**How we build it (faceless example cuts):**
+- **Tool:** `docs/reels/demo/build_parker.py` with the AI stand-in voice, run as
+  `docs/reels/demo/make_example.sh spec.json OUT`.
+- **What it does:** it builds the dark product world (text cards, giant numbers, stage words, quiz cards, charts,
+  real screens and demo clips in a glowing window) and changes the picture every beat.
+- **The brand:** our green and yellow replace his purple.
+- **When the creator films:** add the bright talking-head world and the face bubble over screen recordings.
+- **Product logos:** we don't copy his 3D logos, which are Microsoft's and other trademarks; we use words.
+
 ## Never copy
 - Film, TV or celebrity clips. Luke Barousse cuts to them; they are not ours to use.
 - Other creators' memes or footage.

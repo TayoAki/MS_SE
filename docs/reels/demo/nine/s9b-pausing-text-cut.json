@@ -1,0 +1,21 @@
+{
+ "name": "s9b-pausing-text-cut",
+ "label": "EXAMPLE · AI STAND-IN VOICE · NO FACE",
+ "lines": [
+  {
+   "say": "Pausing a reserved Fabric capacity doesn't save money.",
+   "kind": "text",
+   "show": "Pausing a *reserved* Fabric capacity doesn't save money."
+  },
+  {
+   "say": "The reservation is prepaid, hour by hour.",
+   "kind": "text",
+   "show": "The reservation is *prepaid*, hour by hour."
+  },
+  {
+   "say": "Pausing only cuts pay-as-you-go.",
+   "kind": "text",
+   "show": "Pausing only cuts *pay-as-you-go*."
+  }
+ ]
+}

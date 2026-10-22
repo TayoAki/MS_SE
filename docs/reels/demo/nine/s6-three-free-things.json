@@ -1,0 +1,93 @@
+{
+ "name": "s6-three-free-things",
+ "label": "EXAMPLE · AI STAND-IN VOICE · NO FACE",
+ "lines": [
+  {
+   "say": "Three free things Microsoft gives you to learn Fabric. Save this.",
+   "kind": "cover",
+   "big": [
+    "3 FREE THINGS",
+    "TO LEARN FABRIC"
+   ],
+   "sub": "save this"
+  },
+  {
+   "say": "One: a 60-day Fabric trial, a real capacity you can build on.",
+   "kind": "shot",
+   "src": "assets/pages/trial.png",
+   "crop": [
+    0,
+    560,
+    1080,
+    700
+   ],
+   "credit": "MICROSOFT LEARN",
+   "box": [
+    [
+     687,
+     820,
+     351,
+     39
+    ]
+   ],
+   "pill": "1 · THE TRIAL",
+   "tts": "One: a sixty-day Fabric trial, a real capacity you can build on."
+  },
+  {
+   "say": "No Copilot or data agents on the trial, but lakehouses, pipelines and Power BI are there to practice on.",
+   "kind": "text",
+   "show": "No Copilot or data agents. *Lakehouses, pipelines, Power BI:* yes."
+  },
+  {
+   "say": "Two: the official practice assessment for the DP-700 exam, free on Microsoft Learn.",
+   "kind": "shot",
+   "src": "assets/pages/dp700.png",
+   "crop": [
+    0,
+    0,
+    1080,
+    560
+   ],
+   "credit": "MICROSOFT LEARN",
+   "pill": "2 · PRACTICE ASSESSMENT",
+   "tts": "Two: the official practice assessment for the D P seven hundred exam, free on Microsoft Learn."
+  },
+  {
+   "say": "Same style, wording and difficulty as the real questions, and it shows you where you're weak.",
+   "kind": "text",
+   "show": "Same style, wording, difficulty. Shows *where you're weak*."
+  },
+  {
+   "say": "Three: the exam sandbox. You click through the real exam interface before exam day.",
+   "kind": "shot",
+   "src": "assets/pages/dp700-b.png",
+   "crop": [
+    0,
+    380,
+    1080,
+    560
+   ],
+   "credit": "MICROSOFT LEARN",
+   "pill": "3 · EXAM SANDBOX"
+  },
+  {
+   "say": "And the exam is 100 minutes, so practice with a timer.",
+   "kind": "num",
+   "n": "100",
+   "title": "MINUTES",
+   "sub": "practice with a timer",
+   "tts": "And the exam is a hundred minutes, so practice with a timer."
+  },
+  {
+   "say": "Already certified? Renewing is free too: an online assessment on Microsoft Learn.",
+   "kind": "text",
+   "show": "Renewing? *Free*: an online assessment."
+  },
+  {
+   "say": "Save this, and send it to the friend who keeps saying they'll start Fabric next month.",
+   "kind": "cta",
+   "text": "SAVE THIS",
+   "pre": "and send it to a friend"
+  }
+ ]
+}

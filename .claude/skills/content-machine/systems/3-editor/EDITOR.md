@@ -6,6 +6,10 @@ brand questions and 8-second preview). It cuts the mistakes, restarts and long p
 you pop out on top of the graphics, puts the real pages/apps you talk about on screen, does word-by-word captions, an
 optional film grade and sound effects — and every note you give it is saved so it never makes that mistake again.
 
+**Before anything is filmed:** `docs/reels/demo/make_example.sh <spec.json> <out>` makes a voiced, faceless example
+cut in the house style (`content-machine/formats.md`, "House style"), using a free local AI stand-in voice. Use it to
+judge a script on screen, then replace the voice with the creator's own take in this editor.
+
 ## How to run it from the machine
 1. The recording: `~/content-machine/recordings/<file>` (one take per script; it's fine to repeat lines — the editor
    keeps the last clean take).

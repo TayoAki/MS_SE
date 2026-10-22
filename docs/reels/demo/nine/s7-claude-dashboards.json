@@ -1,0 +1,74 @@
+{
+ "name": "s7-claude-dashboards",
+ "label": "EXAMPLE · AI STAND-IN VOICE · NO FACE",
+ "lines": [
+  {
+   "say": "Claude can now build a live dashboard straight from your Databricks data, and you never write the query.",
+   "kind": "cover",
+   "big": [
+    "CLAUDE",
+    "DASHBOARDS"
+   ],
+   "sub": "live, from your Databricks data"
+  },
+  {
+   "say": "It's called Claude Dashboards. It came out on October 8th, and it's in beta on paid plans.",
+   "kind": "shot",
+   "src": "assets/pages/claude-dash.png",
+   "crop": [
+    0,
+    560,
+    1080,
+    640
+   ],
+   "credit": "CLAUDE.COM · OCT 8 2026",
+   "box": [
+    [
+     347,
+     937,
+     391,
+     46
+    ]
+   ]
+  },
+  {
+   "say": "Step one: connect your data. Sources include Databricks, Snowflake, BigQuery, Redshift and ClickHouse.",
+   "kind": "num",
+   "n": "1",
+   "title": "CONNECT YOUR DATA",
+   "sub": "Databricks · Snowflake · BigQuery · Redshift · ClickHouse"
+  },
+  {
+   "say": "Step two: ask in plain English. Something like, how did this month's pipeline compare to last month?",
+   "kind": "num",
+   "n": "2",
+   "title": "ASK IN PLAIN ENGLISH"
+  },
+  {
+   "say": "Claude writes the query and builds the dashboard.",
+   "kind": "text",
+   "show": "Claude *writes the query*. And builds the dashboard."
+  },
+  {
+   "say": "Step three: it stays current as your data changes.",
+   "kind": "num",
+   "n": "3",
+   "title": "IT STAYS CURRENT"
+  },
+  {
+   "say": "And this is the part I'd show your boss. Click any number, and it shows you the query behind it. Every chart also shows when it last refreshed.",
+   "kind": "text",
+   "show": "Click any number: *the query behind it*. Every chart: when it last refreshed."
+  },
+  {
+   "say": "Two catches. Power BI isn't on the list of tools you can send it to. And on Enterprise plans, it's off until your admin turns it on.",
+   "kind": "text",
+   "show": "Catches: *no Power BI* export. Enterprise: *off until an admin turns it on*."
+  },
+  {
+   "say": "Comment DASH and I'll send you my setup checklist.",
+   "kind": "cta",
+   "keyword": "DASH"
+  }
+ ]
+}

@@ -8,5 +8,25 @@
   "keyword": "IQ",
   "script": "2026-11-09-01-what-is-fabric-iq",
   "added": "2026-10-21"
+ },
+ {
+  "keyword": "FABRIC",
+  "script": "docs/reels/fabric-scripts.md#1-fabric-vs-power-bi",
+  "added": "2026-10-22"
+ },
+ {
+  "keyword": "DASH",
+  "script": "docs/reels/data-scripts-2026-10-21.md#7-claude-builds-dashboards-on-your-databricks-data-now",
+  "added": "2026-10-22"
+ },
+ {
+  "keyword": "NYC",
+  "script": "docs/reels/data-scripts-2026-10-21.md#8-i-analysed-every-complaint-new-york-made-to-311-this-year",
+  "added": "2026-10-22"
+ },
+ {
+  "keyword": "PAUSE",
+  "script": "docs/reels/data-scripts-2026-10-21.md#9-pausing-your-fabric-capacity-doesnt-save-money-if-you-reserved-it",
+  "added": "2026-10-22"
  }
 ]

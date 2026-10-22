@@ -1,0 +1,110 @@
+{
+ "name": "s5-boss-plain-english",
+ "label": "EXAMPLE · AI STAND-IN VOICE · NO FACE",
+ "lines": [
+  {
+   "say": "Your boss is about to ask your Power BI data questions in plain English.",
+   "kind": "cover",
+   "big": [
+    "PLAIN-ENGLISH",
+    "QUESTIONS"
+   ],
+   "sub": "on your Power BI data"
+  },
+  {
+   "say": "In Microsoft Fabric, the thing that answers is a data agent.",
+   "kind": "text",
+   "show": "What answers? *A data agent.*"
+  },
+  {
+   "say": "You point it at up to five sources: semantic models, a warehouse, a KQL database.",
+   "kind": "shot",
+   "src": "assets/pages/agent-sources.png",
+   "crop": [
+    0,
+    620,
+    1080,
+    640
+   ],
+   "credit": "MICROSOFT LEARN",
+   "box": [
+    [
+     820,
+     914,
+     209,
+     39
+    ],
+    [
+     31,
+     968,
+     116,
+     39
+    ]
+   ],
+   "tts": "You point it at up to five sources: semantic models, a warehouse, a K Q L database."
+  },
+  {
+   "say": "It turns the question into DAX, SQL or KQL, runs it, and answers.",
+   "kind": "clip",
+   "src": "assets/clips/agent-reasoning.mp4",
+   "tts": "It turns the question into DAX, S Q L or K Q L, runs it, and answers."
+  },
+  {
+   "say": "And you can publish it to Teams, Microsoft 365 Copilot, Copilot Studio, or any AI app that speaks MCP.",
+   "kind": "shot",
+   "src": "assets/shots/publish.png",
+   "credit": "MICROSOFT LEARN · CC BY 4.0",
+   "crop": [
+    1190,
+    581,
+    1083,
+    549
+   ],
+   "pill": "PUBLISH IT",
+   "tts": "And you can publish it to Teams, Microsoft three sixty five Copilot, Copilot Studio, or any AI app that speaks M C P."
+  },
+  {
+   "say": "Which means the semantic model you built for reports is now what the AI reads.",
+   "kind": "text",
+   "show": "Your semantic model is *what the AI reads*."
+  },
+  {
+   "say": "Three catches before you demo it.",
+   "kind": "num",
+   "n": "3",
+   "title": "CATCHES"
+  },
+  {
+   "say": "One: it's read-only. It answers questions; it doesn't change data.",
+   "kind": "num",
+   "n": "1",
+   "title": "READ-ONLY",
+   "sub": "it answers; it doesn't change data"
+  },
+  {
+   "say": "Two: it answers in English, and it isn't on the free trial.",
+   "kind": "num",
+   "n": "2",
+   "title": "ENGLISH, NO TRIAL"
+  },
+  {
+   "say": "Three: every question uses capacity. Microsoft's own example question costs about 400 CU-seconds, so watch the bill.",
+   "kind": "num",
+   "n": "3",
+   "title": "IT USES CAPACITY",
+   "sub": "billed by tokens · ~400 CU-seconds in Microsoft's example",
+   "tts": "Three: every question uses capacity. Microsoft's own example question costs about four hundred C U seconds, so watch the bill."
+  },
+  {
+   "say": "The skill that matters now is a clean semantic model, because that's what the AI is reading.",
+   "kind": "text",
+   "show": "The skill now: a *clean semantic model*."
+  },
+  {
+   "say": "Follow, and next I'll build one live.",
+   "kind": "cta",
+   "text": "FOLLOW",
+   "pre": "next: I build one live"
+  }
+ ]
+}

@@ -1,0 +1,87 @@
+{
+ "name": "s3-future-analysts-fabric",
+ "label": "EXAMPLE · AI STAND-IN VOICE · NO FACE",
+ "lines": [
+  {
+   "say": "Future data analysts will be using Microsoft Fabric.",
+   "kind": "cover",
+   "big": [
+    "FUTURE ANALYSTS",
+    "USE FABRIC"
+   ]
+  },
+  {
+   "say": "Not because it's new. Because of three things.",
+   "kind": "num",
+   "n": "3",
+   "title": "REASONS"
+  },
+  {
+   "say": "One: one copy of the data. Every tool reads the same lake, so nobody's arguing about whose numbers are right.",
+   "kind": "shot",
+   "src": "assets/shots/onelake-engines.png",
+   "credit": "MICROSOFT LEARN · CC BY 4.0",
+   "box": [
+    [
+     288,
+     348,
+     852,
+     95
+    ]
+   ],
+   "pill": "1 · ONE COPY OF THE DATA"
+  },
+  {
+   "say": "Two: one capacity. It pays the compute for pipelines, SQL, Spark and Power BI.",
+   "kind": "num",
+   "n": "2",
+   "title": "ONE CAPACITY",
+   "sub": "compute for pipelines · SQL · Spark · Power BI"
+  },
+  {
+   "say": "Three: AI built in. Data agents answer questions in plain English, on top of the models you already built.",
+   "kind": "clip",
+   "src": "assets/clips/agent-reasoning.mp4",
+   "pill": "3 · AI BUILT IN",
+   "key": [
+    "plain",
+    "English,"
+   ]
+  },
+  {
+   "say": "Which means the analyst who understands the whole flow gets the job, not just the one who builds charts.",
+   "kind": "text",
+   "show": "The analyst who knows *the whole flow* gets the job."
+  },
+  {
+   "say": "So learn SQL, keep Power BI, and add one thing: the lakehouse.",
+   "kind": "stack",
+   "items": [
+    [
+     "LEARN SQL",
+     "SQL,"
+    ],
+    [
+     "KEEP POWER BI",
+     "keep"
+    ],
+    [
+     "ADD THE LAKEHOUSE",
+     "lakehouse."
+    ]
+   ]
+  },
+  {
+   "say": "That's the DP-600 exam, and it's the skill set most Fabric job posts I've seen list.",
+   "kind": "text",
+   "show": "That's *DP-600*: the skill set most Fabric job posts list.",
+   "tts": "That's the D P six hundred exam, and it's the skill set most Fabric job posts I've seen list."
+  },
+  {
+   "say": "Follow for one Fabric skill a day.",
+   "kind": "cta",
+   "text": "FOLLOW",
+   "pre": "one Fabric skill a day"
+  }
+ ]
+}

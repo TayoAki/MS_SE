@@ -1,0 +1,122 @@
+{
+ "name": "s4-fabric-interview-question",
+ "label": "EXAMPLE · AI STAND-IN VOICE · NO FACE",
+ "lines": [
+  {
+   "say": "Here's a Microsoft Fabric interview question that trips up Power BI people.",
+   "kind": "cover",
+   "big": [
+    "FABRIC",
+    "INTERVIEW Q"
+   ],
+   "sub": "that trips up Power BI people"
+  },
+  {
+   "say": "Your sales data lives in a lakehouse, as Delta tables in OneLake.",
+   "kind": "text",
+   "show": "Sales data: *Delta tables* in a lakehouse, in OneLake."
+  },
+  {
+   "say": "The report needs import speed, but nobody wants to wait for an import refresh.",
+   "kind": "text",
+   "show": "Import speed. *No import refresh.*"
+  },
+  {
+   "say": "Which storage mode? A, Import. B, DirectQuery. C, Direct Lake. D, Dual.",
+   "kind": "options",
+   "q": "Which storage mode?",
+   "items": [
+    "Import",
+    "DirectQuery",
+    "Direct Lake",
+    "Dual"
+   ],
+   "answer": 2
+  },
+  {
+   "say": "Pause, and lock in your answer.",
+   "kind": "options",
+   "q": "Lock in your answer",
+   "items": [
+    "Import",
+    "DirectQuery",
+    "Direct Lake",
+    "Dual"
+   ],
+   "answer": 2,
+   "pill": "PAUSE"
+  },
+  {
+   "say": "It's C. Direct Lake.",
+   "kind": "options",
+   "q": "It's C",
+   "items": [
+    "Import",
+    "DirectQuery",
+    "Direct Lake",
+    "Dual"
+   ],
+   "answer": 2,
+   "reveal": true
+  },
+  {
+   "say": "Power BI loads the Delta columns straight from OneLake, and a refresh only copies metadata, in a few seconds.",
+   "kind": "shot",
+   "src": "assets/pages/directlake.png",
+   "crop": [
+    0,
+    640,
+    1080,
+    760
+   ],
+   "credit": "MICROSOFT LEARN",
+   "box": [
+    [
+     31,
+     941,
+     312,
+     39
+    ]
+   ],
+   "key": [
+    "metadata,"
+   ]
+  },
+  {
+   "say": "Now the answer that gets you the job: there are two kinds of Direct Lake.",
+   "kind": "shot",
+   "src": "assets/shots/dl-type.png",
+   "credit": "MICROSOFT LEARN · CC BY 4.0",
+   "crop": [
+    1328,
+    114,
+    1086,
+    540
+   ],
+   "box": [
+    [
+     1335,
+     561,
+     1037,
+     57
+    ]
+   ]
+  },
+  {
+   "say": "Direct Lake on SQL falls back to DirectQuery when the SQL endpoint has row-level security, and can get slower.",
+   "kind": "text",
+   "show": "On SQL: row-level security → *falls back* to DirectQuery."
+  },
+  {
+   "say": "Direct Lake on OneLake never falls back, but it doesn't apply that SQL security either.",
+   "kind": "text",
+   "show": "On OneLake: *never falls back*, and skips that SQL security."
+  },
+  {
+   "say": "Comment the answer you picked before the reveal.",
+   "kind": "cta",
+   "text": "YOUR ANSWER",
+   "pre": "comment"
+  }
+ ]
+}

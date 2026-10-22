@@ -1,0 +1,109 @@
+{
+ "name": "s9-pausing-reserved-capacity",
+ "label": "EXAMPLE · AI STAND-IN VOICE · NO FACE",
+ "lines": [
+  {
+   "say": "Pausing your Fabric capacity doesn't save money if you bought a reservation.",
+   "kind": "cover",
+   "big": [
+    "PAUSING",
+    "DOESN'T SAVE"
+   ],
+   "sub": "if you bought a reservation"
+  },
+  {
+   "say": "A reservation is a prepaid commitment, used hour by hour.",
+   "kind": "text",
+   "show": "A reservation: *prepaid*, used *hour by hour*."
+  },
+  {
+   "say": "An hour you don't use doesn't carry over. So pausing a reserved capacity just throws those hours away.",
+   "kind": "shot",
+   "src": "assets/pages/reservation.png",
+   "crop": [
+    0,
+    640,
+    1080,
+    640
+   ],
+   "credit": "MICROSOFT LEARN",
+   "box": [
+    [
+     149,
+     940,
+     148,
+     39
+    ]
+   ],
+   "key": [
+    "carry",
+    "over."
+   ]
+  },
+  {
+   "say": "Pausing only cuts pay-as-you-go compute, and your storage keeps billing either way.",
+   "kind": "text",
+   "show": "Pausing cuts *pay-as-you-go* compute only. Storage keeps billing."
+  },
+  {
+   "say": "And there's a second surprise. When you pause, any smoothed usage still waiting to be billed is added up and charged straight away.",
+   "kind": "shot",
+   "src": "assets/pages/pause.png",
+   "crop": [
+    0,
+    620,
+    1080,
+    640
+   ],
+   "credit": "MICROSOFT LEARN",
+   "box": [
+    [
+     720,
+     914,
+     298,
+     39
+    ],
+    [
+     31,
+     968,
+     246,
+     39
+    ]
+   ],
+   "key": [
+    "straight",
+    "away."
+   ]
+  },
+  {
+   "say": "So before you pause, check two things.",
+   "kind": "num",
+   "n": "2",
+   "title": "CHECKS"
+  },
+  {
+   "say": "Is this capacity reserved? And how much smoothed usage is waiting?",
+   "kind": "stack",
+   "items": [
+    [
+     "RESERVED?",
+     "reserved?"
+    ],
+    [
+     "USAGE WAITING?",
+     "waiting?"
+    ]
+   ]
+  },
+  {
+   "say": "The Capacity Metrics app shows it as carry-forward.",
+   "kind": "clip",
+   "src": "assets/clips/capacity.mp4"
+  },
+  {
+   "say": "Comment PAUSE and I'll send you my capacity cost checklist.",
+   "kind": "cta",
+   "keyword": "PAUSE"
+  }
+ ]
+}

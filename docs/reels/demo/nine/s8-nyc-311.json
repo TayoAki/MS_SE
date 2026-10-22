@@ -1,0 +1,165 @@
+{
+ "name": "s8-nyc-311",
+ "label": "EXAMPLE · AI STAND-IN VOICE · NO FACE",
+ "lines": [
+  {
+   "say": "New Yorkers filed almost four million complaints with 311 in the last year.",
+   "kind": "cover",
+   "big": [
+    "4 MILLION",
+    "311 COMPLAINTS"
+   ],
+   "sub": "NYC Open Data · Oct 2025 – Sep 2026",
+   "tts": "New Yorkers filed almost four million complaints with three one one in the last year."
+  },
+  {
+   "say": "I loaded every one of them into Microsoft Fabric and asked it questions in plain English.",
+   "kind": "text",
+   "show": "Every one, into *Microsoft Fabric*. Asked in *plain English*."
+  },
+  {
+   "say": "Number one isn't noise. It's illegal parking. Six hundred and eleven thousand complaints.",
+   "kind": "chart",
+   "title": "Top complaints",
+   "bars": [
+    [
+     "Illegal parking",
+     611282
+    ],
+    [
+     "Residential noise",
+     432431
+    ],
+    [
+     "Heat / hot water",
+     359087
+    ],
+    [
+     "Blocked driveway",
+     194672
+    ],
+    [
+     "Street noise",
+     174340
+    ]
+   ],
+   "note": "NYC 311, Oct 1 2025 – Sep 30 2026"
+  },
+  {
+   "say": "Residential noise is second, and noise has a clock.",
+   "kind": "text",
+   "show": "Residential noise is *second*. And noise has *a clock*."
+  },
+  {
+   "say": "Complaints about noisy neighbours peak between ten and eleven at night.",
+   "kind": "num",
+   "n": "10PM",
+   "title": "THE PEAK HOUR",
+   "sub": "10–11 pm · 42,705 complaints"
+  },
+  {
+   "say": "And the worst day isn't Friday or Saturday. It's Sunday.",
+   "kind": "chart",
+   "title": "Residential noise by day",
+   "bars": [
+    [
+     "Sunday",
+     87909
+    ],
+    [
+     "Saturday",
+     82975
+    ],
+    [
+     "Friday",
+     56168
+    ],
+    [
+     "Monday",
+     53531
+    ],
+    [
+     "Wednesday",
+     51514
+    ],
+    [
+     "Tuesday",
+     51286
+    ],
+    [
+     "Thursday",
+     49048
+    ]
+   ]
+  },
+  {
+   "say": "Over half of those are loud music or a party. Most of the rest are banging and pounding.",
+   "kind": "chart",
+   "title": "What the noise is",
+   "bars": [
+    [
+     "Loud music / party",
+     247972
+    ],
+    [
+     "Banging / pounding",
+     147644
+    ],
+    [
+     "Loud talking",
+     29669
+    ],
+    [
+     "Loud TV",
+     7146
+    ]
+   ]
+  },
+  {
+   "say": "Heat is the seasonal one. January had about twenty-two times more heat complaints than August.",
+   "kind": "chart",
+   "title": "Heat / hot water",
+   "bars": [
+    [
+     "January 2026",
+     79928
+    ],
+    [
+     "August 2026",
+     3682
+    ]
+   ],
+   "note": "about 22 times more"
+  },
+  {
+   "say": "But my favourite part of this data set is the bottom of the list.",
+   "kind": "text",
+   "show": "My favourite part: *the bottom of the list*."
+  },
+  {
+   "say": "Fifteen complaints about radioactive material. Six about squeegees. And exactly one complaint filed under trapping pigeon.",
+   "kind": "chart",
+   "title": "The bottom of the list",
+   "bars": [
+    [
+     "Radioactive material",
+     15
+    ],
+    [
+     "Squeegee",
+     6
+    ],
+    [
+     "Trapping pigeon",
+     1
+    ]
+   ]
+  },
+  {
+   "say": "Comment NYC and I'll send you the data set and every question I asked.",
+   "kind": "cta",
+   "keyword": "NYC",
+   "tts": "Comment N Y C and I'll send you the data set and every question I asked."
+  }
+ ]
+}
